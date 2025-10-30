@@ -408,13 +408,26 @@
     <!-- Contact部分 -->
     <div class="column contact-column" id="contact">
       <h2 data-lang-en="Contact Us" data-lang-ja="お問い合わせ" data-lang-ko="연락처" data-lang-zh-cn="联系我们" data-lang-zh-tw="聯繫我們" data-lang-es="Contáctenos"></h2>
-      <form class="contact-form">
-        <input type="text" placeholder="Your Name" data-lang-en="Your Name" data-lang-ja="名前" data-lang-ko="이름" data-lang-zh-cn="您的姓名" data-lang-zh-tw="您的姓名" data-lang-es="Su nombre" required>
-        <input type="email" placeholder="Email Address" data-lang-en="Email Address" data-lang-ja="メールアドレス" data-lang-ko="이메일 주소" data-lang-zh-cn="电子邮箱" data-lang-zh-tw="電子郵箱" data-lang-es="Correo electrónico" required>
-        <input type="text" placeholder="Subject" data-lang-en="Subject" data-lang-ja="件名" data-lang-ko="주제" data-lang-zh-cn="主题" data-lang-zh-tw="主題" data-lang-es="Asunto" required>
-        <textarea rows="5" placeholder="Your Message" data-lang-en="Your Message" data-lang-ja="メッセージ" data-lang-ko="메시지" data-lang-zh-cn="您的留言" data-lang-zh-tw="您的留言" data-lang-es="Su mensaje" required></textarea>
-        <button type="submit" data-lang-en="Send Message" data-lang-ja="メッセージを送信" data-lang-ko="메시지 보내기" data-lang-zh-cn="发送留言" data-lang-zh-tw="發送留言" data-lang-es="Enviar mensaje"></button>
-      </form>
+<!-- 1. 添加action属性，指向Formspree端点URL -->
+<!-- 2. 明确method="POST" -->
+<!-- 3. 可选：添加接受条款字段（防垃圾邮件） -->
+<form 
+  class="contact-form"
+  action="https://formspree.io/f/xjkaevro"  <!-- 替换为你的Formspree端点URL -->
+  method="POST"
+>
+  <!-- 原字段保留，name属性需明确（Formspree通过name识别数据） -->
+  <input type="text" name="name" placeholder="Your Name" ... required>  <!-- 添加name="name" -->
+  <input type="email" name="email" placeholder="Email Address" ... required>  <!-- 添加name="email" -->
+  <input type="text" name="subject" placeholder="Subject" ... required>  <!-- 添加name="subject" -->
+  <textarea rows="5" name="message" placeholder="Your Message" ... required></textarea>  <!-- 添加name="message" -->
+
+  <!-- 可选：防垃圾邮件（Formspree推荐） -->
+  <input type="hidden" name="_captcha" value="false">  <!-- 关闭验证码（免费版可选） -->
+  <input type="hidden" name="_next" value="https://你的网站域名/thankyou.html">  <!-- 提交后跳转的感谢页 -->
+
+  <button type="submit" ...>Send Message</button>
+</form>
     </div>
   </section>
 </div>
@@ -452,19 +465,3 @@ http://www.kendocrafts.com -->
 <!-- 统计代码结束 -->
 </body>
 </html>
-<!-- modify this form HTML and place wherever you want your form -->
-<form
-  action="https://formspree.io/f/xjkaevro"
-  method="POST"
->
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
-</form>
