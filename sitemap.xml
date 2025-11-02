@@ -1,43 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- 单页网站首页（根路径） -->
+  <!-- 单页首页 -->
   <url>
     <loc>https://www.kendocrafts.com/</loc>
     <lastmod>2025-10-31</lastmod>
-    <changefreq>monthly</changefreq> <!-- 单页若每月更新，用monthly；若不常更，用yearly -->
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <!-- 单页内的锚点路径（若有多个导航区域，按实际锚点添加） -->
+  <!-- 手套修复服务锚点 -->
   <url>
-    <loc>https://www.kendocrafts.com/#kote</loc> <!-- 示例：甲胄区域 -->
+    <loc>https://www.kendocrafts.com/#kote</loc>
     <lastmod>2025-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
+  <!-- 面护具翻新服务锚点 -->
   <url>
-    <loc>https://www.kendocrafts.com/#men</loc> <!-- 示例：男士装备区域 -->
+    <loc>https://www.kendocrafts.com/#men</loc>
     <lastmod>2025-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
+  <!-- 刺绣服务锚点 -->
   <url>
-    <loc>https://www.kendocrafts.com/#about</loc> <!-- 示例：关于我们区域 -->
+    <loc>https://www.kendocrafts.com/#embroidery</loc>
     <lastmod>2025-10-31</lastmod>
-    <changefreq>yearly</changefreq> <!-- 关于页通常很少更新，用yearly -->
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
-
+  <!-- 竹剑雕刻服务锚点 -->
   <url>
-    <loc>https://www.kendocrafts.com/#contact</loc> <!-- 示例：联系区域 -->
+    <loc>https://www.kendocrafts.com/#engraving</loc>
+    <lastmod>2025-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- 关于我们锚点 -->
+  <url>
+    <loc>https://www.kendocrafts.com/#about</loc>
     <lastmod>2025-10-31</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
-<<<<<<< HEAD
+  <!-- 常见问题锚点 -->
+  <url>
+    <loc>https://www.kendocrafts.com/#faq</loc>
+    <lastmod>2025-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- 联系我们锚点 -->
+  <url>
+    <loc>https://www.kendocrafts.com/#contact</loc>
+    <lastmod>2025-10-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
-=======
-</urlset>
->>>>>>> 088fba2edff588542406677f0ff0ca06a0abf81f
