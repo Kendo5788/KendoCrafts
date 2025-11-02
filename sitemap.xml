@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Main site entry -->
@@ -37,3 +38,71 @@
     <priority>0.7</priority>
   </url>
 </urlset>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- 首页 -->
+  <url>
+    <loc>https://www.kendocrafts.com/</loc>
+    <lastmod>2025-10-31</lastmod> <!-- 假设最近更新日期 -->
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- 手套修复服务页面 -->
+  <url>
+    <loc>https://www.kendocrafts.com/#kote</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 面护具翻新服务页面 -->
+  <url>
+    <loc>https://www.kendocrafts.com/#men</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 刺绣服务页面 -->
+  <url>
+    <loc>https://www.kendocrafts.com/#embroidery</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 竹剑雕刻服务页面 -->
+  <url>
+    <loc>https://www.kendocrafts.com/#engraving</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 关于我们页面 -->
+  <url>
+    <loc>https://www.kendocrafts.com/#about</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>quarterly</changefreq> <!-- 公司信息更新频率较低 -->
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 常见问题页面 -->
+  <url>
+    <loc>https://www.kendocrafts.com/#faq</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 联系我们页面 -->
+  <url>
+    <loc>https://www.kendocrafts.com/#contact</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>quarterly</changefreq> <!-- 联系信息更新频率较低 -->
+    <priority>0.7</priority>
+  </url>
+</urlset>
+>>>>>>> f0be009300a76e8124ba21186b22b7854d184769
