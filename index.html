@@ -13,10 +13,39 @@
 <meta name="robots" content="index, follow">
 <title>KendoCrafts | Crafting the Spirit of Kendo</title>
 <!-- 预加载关键CSS，提升渲染速度 -->
-<link rel="preload" href="css/style.css" as="style" onload="this.rel='stylesheet'">
-<link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="css/style.css">
 <!-- 预连接统计工具域名，减少连接延迟 -->
 <link rel="preconnect" href="https://www.statecounter.com">
+<style>
+  /* 16:9比例Banner响应式样式 */
+  .banner {
+    margin-top: 80px !important;
+    width: 100% !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+  
+  .banner-container {
+    width: 100% !important;
+    padding-top: 56.25%; /* 16:9比例 (9/16 = 0.5625) */
+    position: relative !important;
+    margin: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  
+  .banner img {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 1 !important;
+    object-fit: contain !important; /* 保持比例并覆盖容器 */
+    display: block !important;
+    margin: 0 !important;
+  }
+</style>
 </head>
 <body>
 <!-- Header / Navigation -->
@@ -60,15 +89,14 @@
 <!-- Banner / Home Section -->
 <section id="home" class="banner">
   <!-- LCP核心图片：优先加载，不延迟 -->
-  <img src="images/kendo-banner-main.webp" alt="Kendo Equipment Banner" 
-       data-lang-en="Kendo Equipment Banner" 
-       data-lang-ja="剣道用品のバナー" 
-       data-lang-ko="겐도 장비 배너" 
-       data-lang-zh-cn="剑道装备横幅" 
-       data-lang-zh-tw="劍道裝備橫幅" 
-       data-lang-es="Banner de equipo de Kendo" loading="eager"
-       fetchpriority="high" 
-       width="1920" height="1080"> 
+    <img src="images/kendo-banner-main.webp" alt="Kendo Equipment Banner" 
+         data-lang-en="Kendo Equipment Banner" 
+         data-lang-ja="剣道用品のバナー" 
+         data-lang-ko="겐도 장비 배너" 
+         data-lang-zh-cn="剑道装备横幅" 
+         data-lang-zh-tw="劍道裝備橫幅" 
+         data-lang-es="Banner de equipo de Kendo" loading="eager"
+         fetchpriority="high">
 </section>
 
 <!-- 业务介绍区域 -->
@@ -88,6 +116,7 @@
 </section>
 
 <div class="container">
+
   <!-- Kote Repair -->
   <section id="kote" class="service-section row-layout">
     <div class="carousel" data-carousel="kote">
@@ -131,11 +160,11 @@
     </div>
     <div class="service-text">
       <h2 data-lang-en="Kote Repair & Palm Replacement" data-lang-ja="小手の修理と掌の交換" data-lang-ko="코테 수리 및 손바닥 교체" data-lang-zh-cn="手套修复与掌心更换" data-lang-zh-tw="手套修復與掌心更換" data-lang-es="Reparación de Kote y reemplazo de palma"></h2>
-      <p data-lang-en="Restore your Kote to its best condition with our professional palm replacement and repair service. We use high-quality materials such as breathable fabric and authentic Japanese deer leather, available in multiple color options including traditional brown and classic white." 
-         data-lang-ja="専門的な掌の交換と修理サービスで、あなたの小手を最高の状態に復元します。通気性のある生地や本物の日本の鹿革などの高品質素材を使用し、伝統的な茶色やクラシックな白など複数の色から選択できます。" 
-         data-lang-ko="전문적인 손바닥 교체 및 수리 서비스로 코테를 최상의 상태로 복원하세요. 통기성이 좋은 원단과 정품 일본 사슴가죽과 같은 고품질 소재를 사용하며, 전통적인 갈색과 클래식 흰색을 포함한 다양한 색상 옵션을 제공합니다." 
-         data-lang-zh-cn="通过我们的专业掌心更换和维修服务，让您的剑道手套恢复最佳状态。我们使用高品质材料，如透气面料和正宗日本鹿皮，提供多种颜色选择，包括传统棕色和经典白色。" 
-         data-lang-zh-tw="透過我們的專業掌心更換和維修服務，讓您的劍道手套恢復最佳狀態。我們使用高品質材料，如透氣面料和正宗日本鹿皮，提供多種顏色選擇，包括傳統棕色和經典白色。" 
+      <p data-lang-en="Restore your Kote to its best condition with our professional palm replacement and repair service. We use high-quality materials including breathable fabric and authentic Japanese deer leather, available in multiple color options including traditional brown and classic white." 
+         data-lang-ja="プロの掌交換と修理サービスで、あなたの小手を最高の状態に復元します。通気性のある生地と本物の日本の鹿革を使用し、伝統的な茶色やクラシックな白など複数の色から選択できます。" 
+         data-lang-ko="전문적인 손바닥 교체 및 수리 서비스로 코테를 최상의 상태로 복원하세요. 통기성 있는 원단과 진정한 일본 사슴 가죽을 사용하며, 전통적인 갈색과 클래식한 흰색을 포함한 다양한 색상 옵션을 제공합니다." 
+         data-lang-zh-cn="通过我们的专业掌心更换和修复服务，将您的手套恢复到最佳状态。我们使用高质量材料，包括透气面料和正宗日本鹿皮，有多种颜色选择，包括传统棕色和经典白色。" 
+         data-lang-zh-tw="透過我們的專業掌心更換和修復服務，將您的手套恢復到最佳狀態。我們使用高品質材料，包括透氣面料和正宗日本鹿皮，有多種顏色選擇，包括傳統棕色和經典白色。" 
          data-lang-es="Restablezca su Kote a su mejor condición con nuestro servicio profesional de reemplazo y reparación de palmas. Utilizamos materiales de alta calidad como tela transpirable y auténtica piel de ciervo japonesa, disponibles en múltiples opciones de color, incluyendo marrón tradicional y blanco clásico."></p>
       <div class="service-button">
         <a href="#contact" class="quote-btn" 
@@ -154,11 +183,11 @@
     <div class="service-text">
       <h2 data-lang-en="Men Refinishing & Restoration" data-lang-ja="面の塗装と復元" data-lang-ko="먼 재도색 및 복원" data-lang-zh-cn="面护具翻新与修复" data-lang-zh-tw="面護具翻新與修復" data-lang-es="Refinamiento y restauración de Men"></h2>
       <p data-lang-en="Bring new life to your equipment with our professional Kendo gear restoration service. We offer surface refinishing for men and throat areas (with optional fully black finish), color renewal for men, dō, kote and tare, and professional deep cleaning." 
-         data-lang-ja="専門的な剣道用品復元サービスで、あなたの装備に新しい生命を吹き込みましょう。面と喉の部分の表面塗装（オプションで全黒仕上げ）、面、胴、小手、楯の色復元、そして専門的な深部清掃を提供しています。" 
-         data-lang-ko="전문적인 검도 장비 복원 서비스로 장비에 새로운 생명을 불어넣어 보세요. 먼과 목 부분의 표면 재도색(선택적으로 완전히 검은색 마감), 먼, 도, 코테 및 타레의 색상 갱신, 그리고 전문적인 깊은 청소를 제공합니다." 
-         data-lang-zh-cn="通过我们的专业剑道装备修复服务，让您的装备重获新生。我们提供面护具和喉部区域的表面翻新（可选全黑处理）、面护具、护胸、手套和护腰的颜色更新，以及专业深度清洁。" 
-         data-lang-zh-tw="透過我們的專業劍道裝備修復服務，讓您的裝備重獲新生。我們提供面護具和喉部區域的表面翻新（可選全黑處理）、面護具、護胸、手套和護腰的顏色更新，以及專業深度清潔。" 
-         data-lang-es="Devuelva vida a su equipo con nuestro servicio profesional de restauración de equipos de kendo. Ofrecemos refinamiento de superficie para áreas de men y garganta (acabado totalmente negro opcional), renovación de color para men, dō, kote y tare, y limpieza profesional profunda."></p>
+         data-lang-ja="プロの剣道用品復元サービスで、あなたの装備に新しい生命を吹き込みましょう。面と喉の部分の表面塗装（オプションで全黒仕上げ）、面、胴、小手、垂れの色の復元、そして専門的な徹底クリーニングを提供しています。" 
+         data-lang-ko="전문적인 겐도 장비 복원 서비스로 장비에 새로운 생명을 불어넣어보세요. 먼과 목 부분의 표면 재도색(선택적으로 완전 검은색 마감), 먼, 동, 코테, 타레의 색상 갱신, 그리고 전문적인 깊은 청소 서비스를 제공합니다." 
+         data-lang-zh-cn="通过我们的专业剑道装备修复服务，为您的装备注入新的活力。我们提供面护具和喉部区域的表面翻新（可选全黑处理）、面护具、护胸、手套和护腰的颜色更新，以及专业深度清洁。" 
+         data-lang-zh-tw="透過我們的專業劍道裝備修復服務，為您的裝備注入新的活力。我們提供面護具和喉部區域的表面翻新（可選全黑處理）、面護具、護胸、手套和護腰的顏色更新，以及專業深度清潔。" 
+         data-lang-es="Darle nueva vida a su equipo con nuestro servicio profesional de restauración de equipos de kendo. Ofrecemos refinamiento de superficie para áreas de men y garganta (con acabado totalmente negro opcional), renovación de color para men, dō, kote y tare, y limpieza profunda profesional."></p>
       <div class="service-button">
         <a href="#contact" class="quote-btn" 
            data-lang-en="Request a Quote" 
@@ -245,10 +274,10 @@
            data-lang-es="Ejemplo de bordado de kendo 5" loading="lazy">
     </div>
     <div class="service-text">
-      <h2 data-lang-en="Custom Embroidery" data-lang-ja="オーダーメイド刺繡" data-lang-ko="맞춤 자수" data-lang-zh-cn="定制刺绣" data-lang-zh-tw="定制刺繡" data-lang-es="Bordado personalizado"></h2>
+      <h2 data-lang-en="Custom Embroidery Services" data-lang-ja="オーダーメイド刺繡サービス" data-lang-ko="맞춤 자수 서비스" data-lang-zh-cn="定制刺绣服务" data-lang-zh-tw="定制刺繡服務" data-lang-es="Servicios de bordado personalizado"></h2>
       <p data-lang-en="Add a personal touch to your Kendo gear with our precision embroidery service. We can embroider your name, dojo name, or custom designs on your men, kote, or hakama. Choose from multiple thread colors and font styles to create a unique look that represents your identity." 
-         data-lang-ja="精密な刺繡サービスで、あなたの剣道用品に個人的なタッチを加えてください。名前、道場名、またはオリジナルデザインを面、小手、または袴に刺繡することができます。複数の糸の色とフォントスタイルから選択して、あなたの個性を表現する独特の外観を作り上げましょう。" 
-         data-lang-ko="정밀한 자수 서비스로 검도 장비에 개인적인 감각을 더하세요. 이름, 도장 이름 또는 맞춤 디자인을 멘, 코테 또는 하카마에 자수할 수 있습니다. 여러 실 색상과 글꼴 스타일 중 선택하여 자신의 정체성을 표현하는 독특한 모습을 만들어보세요." 
+         data-lang-ja="精密な刺繡サービスで、あなたの剣道用品に個性的な仕上がりを加えましょう。名前、道場名、またはオリジナルデザインを面、小手、袴に刺繡することができます。複数の糸色とフォントスタイルから選択し、あなたの個性を表現する独特のデザインを作り上げましょう。" 
+         data-lang-ko="정밀 자수 서비스로 겐도 장비에 개인적인 느낌을 더하세요. 이름, 도장 이름 또는 맞춤 디자인을 먼, 코테 또는 하카마에 자수할 수 있습니다. 다양한 실 색상과 글꼴 스타일에서 선택하여 당신의 정체성을 표현하는 독특한 모습을 만드세요." 
          data-lang-zh-cn="通过我们的精密刺绣服务，为您的剑道装备增添个性。我们可以在您的面护具、手套或袴上绣上您的名字、道场名称或定制设计。从多种线色和字体样式中选择，打造独特的个人风格。" 
          data-lang-zh-tw="透過我們的精密刺繡服務，為您的劍道裝備增添個性。我們可以在您的面護具、手套或袴上繡上您的名字、道場名稱或定制設計。從多種線色和字體樣式中選擇，打造獨特的個人風格。" 
          data-lang-es="Agregue un toque personal a su equipo de kendo con nuestro servicio de bordado de precisión. Podemos bordar su nombre, nombre de dojo o diseños personalizados en su men, kote o hakama. Elija entre múltiples colores de hilo y estilos de fuente para crear una apariencia única que represente su identidad."></p>
@@ -268,9 +297,9 @@
   <section id="engraving" class="service-section row-layout row-reverse">
     <div class="service-text">
       <h2 data-lang-en="Shinai Engraving" data-lang-ja="竹刀彫刻" data-lang-ko="신나이 새김" data-lang-zh-cn="竹剑雕刻" data-lang-zh-tw="竹劍雕刻" data-lang-es="Grabado en Shinai"></h2>
-      <p data-lang-en="Personalize your shinai with our precision engraving service. We offer custom name engraving, dojo symbols, and traditional motifs to make your bamboo sword truly unique. Our laser engraving technique ensures crisp, long-lasting designs that won't fade with use or time." 
-         data-lang-ja="精密な彫刻サービスで竹刀を個人化しましょう。オーダーメイドの名前彫刻、道場のシンボル、伝統的なモチーフを提供し、あなたの竹刀を真に独特なものにします。当社のレーザー彫刻技術は、使用や時間の経過でも褪せることのない鮮明で耐久性のあるデザインを保証します。" 
-         data-lang-ko="정밀한 새김 서비스로 신나이를 개인화하세요. 맞춤 이름 새김, 도장 심볼 및 전통적인 모티프를 제공하여 대나무 칼을 정말 독특하게 만듭니다. 우리의 레이저 새김 기술은 사용하거나 시간이 지나도 퇴색되지 않는 선명하고 오래가는 디자인을 보장합니다." 
+      <p data-lang-en="Personalize your shinai with our precision engraving service. We offer custom name engraving, dojo symbols, and traditional motifs to make your bamboo sword truly unique. Our laser engraving technique ensures sharp, long-lasting designs that won't fade with use or time." 
+         data-lang-ja="精密な彫刻サービスで、あなたの竹刀を個性化しましょう。オーダーメイドの名前彫刻、道場のシンボル、伝統的なモチーフを提供し、あなたの竹刀を真にユニークなものにします。レーザー彫刻技術を使用することで、使用や時間の経過によって褪せることのない鮮明で耐久性のあるデザインを保証します。" 
+         data-lang-ko="정밀한 새김 서비스로 신나이를 개인화하세요. 맞춤 이름 새김, 도장 상징 및 전통적인 무늬를 제공하여 대나무 칼을 정말로 독특하게 만듭니다. 레이저 새김 기술은 사용이나 시간이 지나도 희미해지지 않는 선명하고 오래가는 디자인을 보장합니다." 
          data-lang-zh-cn="通过我们的精密雕刻服务，为您的竹剑增添个性。我们提供定制姓名雕刻、道场标志和传统图案，让您的竹剑真正独一无二。我们的激光雕刻技术确保图案清晰、持久，不会因使用或时间而褪色。" 
          data-lang-zh-tw="透過我們的精密雕刻服務，為您的竹劍增添個性。我們提供定制姓名雕刻、道場標誌和傳統圖案，讓您的竹劍真正獨一無二。我們的激光雕刻技術確保圖案清晰、持久，不會因使用或時間而褪色。" 
          data-lang-es="Personalice su shinai con nuestro servicio de grabado de precisión. Ofrecemos grabado de nombres personalizados, símbolos de dojo y motivos tradicionales para hacer que su espada de bambú sea realmente única. Nuestra técnica de grabado láser garantiza diseños nítidos y duraderos que no se desvanecerán con el uso o el tiempo."></p>
@@ -347,11 +376,11 @@
     </div>
     <div class="about-text-expanded">
       <h2 data-lang-en="About Us" data-lang-ja="会社概要" data-lang-ko="회사 소개" data-lang-zh-cn="关于我们" data-lang-zh-tw="關於我們" data-lang-es="Sobre Nosotros"></h2>
-      <p data-lang-en="Welcome to KendoCrafts, your trusted partner in the world of Kendo gear repairs. We specialize in providing professional repair and maintenance services for all your Kendo equipment, from Kote to Bogu. With years of experience in the Kendo community, we understand the importance of preserving the integrity and functionality of your gear. Whether you're a seasoned practitioner or a beginner, we ensure that your equipment is restored to its best condition, allowing you to focus on your training without worry. Our expert team uses high-quality materials and traditional techniques to repair and maintain your Kendo gear, making sure it lasts longer and performs better. We are passionate about keeping Kendo’s legacy alive and supporting athletes in their pursuit of excellence." 
-         data-lang-ja="KendoCraftsへようこそ。剣道用品修理の世界における信頼できるパートナーです。私たちは小手（Kote）から防具（Bogu）まで、すべての剣道用品の専門的な修理とメンテナンスサービスを提供することに特化しています。剣道コミュニティでの長年の経験を持つ私たちは、装備の完全性と機能性を維持する重要性を理解しています。熟練した練習者であれ、初心者であれ、装備を最高の状態に復元し、安心して練習に集中できるようにします。専門チームは高品質な素材と伝統的な技術を使用して剣道用品を修理・メンテナンスし、長持ちさせ、性能を向上させます。私たちは剣道の伝統を守り、選手たちの優れた達成を支援することに情熱を持っています。" 
-         data-lang-ko="KendoCrafts에 오신 것을 환영합니다.겐도 장비 수리 분야에서 신뢰할 수 있는 파트너입니다. 저희는 코테(Kote)부터 보구(Bogu)까지 모든 겐도 장비에 대한 전문적인 수리 및 유지 관리 서비스를 제공합니다.겐도 커뮤니티에서 오랜 경험을 가진 우리는 장비의 완전성과 기능성을 보존하는 중요성을 이해합니다. 숙련된 연습자이든 초보자이든, 장비를 최상의 상태로 복원하여 걱정 없이 훈련에 집중할 수 있도록 보장합니다. 전문 팀은 고품질 소재와 전통 기술을 사용하여 검도 장비를 수리하고 유지 관리하여 수명을 연장하고 성능을 향상시킵니다. 우리는 검도의 유산을 살리고 운동선수들이 우수성을 추구하는 것을 지원하는 데 열정을 가지고 있습니다." 
-         data-lang-zh-cn="欢迎来到KendoCrafts，我们是剑道装备维修领域值得信赖的合作伙伴。我们专业提供从剑道手套（Kote）到护具（Bogu）等所有剑道装备的专业维修和保养服务。凭借在剑道界多年的经验，我们深知维护装备完整性和功能性的重要性。无论您是资深练习者还是初学者，我们都能将您的装备恢复到最佳状态，让您可以毫无顾虑地专注于训练。我们的专业团队采用高品质材料和传统工艺来维修和保养您的剑道装备，确保其更耐用、性能更出色。我们热衷于传承剑道的 legacy，并支持运动员追求卓越。" 
-         data-lang-zh-tw="歡迎來到KendoCrafts，我們是劍道裝備維修領域值得信賴的合作夥伴。我們專業提供從劍道手套（Kote）到護具（Bogu）等所有劍道裝備的專業維修和保養服務。憑藉在劍道界多年的經驗，我們深知維護裝備完整性和功能性的重要性。無論您是資深練習者還是初學者，我們都能將您的裝備恢復到最佳狀態，讓您可以毫無顧慮地專注於訓練。我們的專業團隊採用高品質材料和傳統工藝來維修和保養您的劍道裝備，確保其更耐用、性能更出色。我們熱衷於傳承劍道的legacy，並支持運動員追求卓越。" 
+      <p data-lang-en="Welcome to KendoCrafts, your trusted partner in the world of kendo equipment repairs. We specialize in providing professional repair and maintenance services for all your kendo gear, from Kote to Bogu. With years of experience in the kendo community, we understand the importance of preserving the integrity and functionality of your equipment. Whether you're an experienced practitioner or a beginner, we ensure your gear is restored to its best condition, allowing you to focus on your training without worries. Our team of experts uses high-quality materials and traditional techniques to repair and maintain your kendo equipment, ensuring it lasts longer and performs better. We're passionate about keeping the heritage of kendo alive and supporting athletes in their pursuit of excellence." 
+         data-lang-ja="剣道クラフトへようこそ。剣道用品の修理における信頼できるパートナーです。小手から防具まで、すべての剣道用品の専門的な修理とメンテナンスサービスを提供しています。剣道コミュニティでの長年の経験を持ち、装備の健全性と機能を維持する重要性を理解しています。経験豊富な練習者であれ、初心者であれ、装備を最高の状態に復元し、心配せずにトレーニングに集中できるようにします。専門家のチームが高品質の素材と伝統的な技術を使用して剣道用品を修理・メンテナンスし、長持ちさせ、性能を向上させます。剣道の伝統を守り、優れた技術を追求するアスリートを支援することに情熱を持って取り組んでいます。" 
+         data-lang-ko="겐도 장비 수리 분야의 신뢰할 수 있는 파트너인 겐도크래프트에 오신 것을 환영합니다. 우리는 코테부터 보구까지 모든 겐도 장비에 대한 전문적인 수리 및 유지 관리 서비스를 제공하는 데 특화되어 있습니다. 겐도 커뮤니티에서 오랜 경험을 쌓아온 우리는 장비의 무결성과 기능 유지를 중요하게 생각합니다. 경험 많은 연습자이든 초보자이든, 장비를 최상의 상태로 복원하여 걱정 없이 훈련에 집중할 수 있도록 지원합니다. 우리의 전문가 팀은 고품질 소재와 전통적인 기술을 사용하여 겐도 장비를 수리하고 유지 관리하여 수명을 연장하고 성능을 향상시킵니다. 우리는 겐도의 유산을 살리고 우수함을 추구하는 운동선수들을 지원하는 데 열정을 가지고 있습니다." 
+         data-lang-zh-cn="欢迎来到KendoCrafts，您在剑道装备维修领域值得信赖的合作伙伴。我们专门为您的所有剑道装备提供专业的维修和保养服务，从小手到全套护具。凭借在剑道社区多年的经验，我们深知维护装备完整性和功能性的重要性。无论您是经验丰富的练习者还是初学者，我们都能确保您的装备恢复到最佳状态，让您可以毫无顾虑地专注于训练。我们的专家团队使用高质量材料和传统技术来维修和保养您的剑道装备，确保其更耐用、性能更好。我们热衷于传承剑道的传统，并支持运动员追求卓越。" 
+         data-lang-zh-tw="歡迎來到KendoCrafts，您在劍道裝備維修領域值得信賴的合作夥伴。我們專門為您的所有劍道裝備提供專業的維修和保養服務，從小手到全套護具。憑藉在劍道社區多年的經驗，我們深知維護裝備完整性和功能性的重要性。無論您是經驗豐富的練習者還是初學者，我們都能確保您的裝備恢復到最佳狀態，讓您可以毫無顧慮地專注於訓練。我們的專家團隊使用高品質材料和傳統技術來維修和保養您的劍道裝備，確保其更耐用、性能更好。我們熱衷於傳承劍道的傳統，並支持運動員追求卓越。" 
          data-lang-es="Bienvenido a KendoCrafts, tu socio de confianza en el mundo de las reparaciones de equipos de kendo. Nos especializamos en ofrecer servicios profesionales de reparación y mantenimiento para todos tus equipos de kendo, desde Kote hasta Bogu. Con años de experiencia en la comunidad del kendo, comprendemos la importancia de preservar la integridad y funcionalidad de tu equipo. Ya seas un practicante experimentado o un principiante, nos aseguramos de que tu equipo se restablezca a su mejor condición, permitiéndote centrarte en tu entrenamiento sin preocupaciones. Nuestro equipo de expertos utiliza materiales de alta calidad y técnicas tradicionales para reparar y mantener tu equipo de kendo, asegurando que dure más y funcione mejor. Estamos apasionados por mantener viva la herencia del kendo y apoyar a los atletas en su búsqueda de la excelencia."></p>
     </div>
   </section>
@@ -365,54 +394,54 @@
       <!-- 第1条 -->
       <div class="faq-item">
         <button class="faq-question" data-lang-en="How long does it take to repair my Kendo gear?" 
-                data-lang-ja="剣道用品の修理にはどれくらい時間がかかりますか？" 
+                data-lang-ja="剣道の装備の修理にはどれくらい時間がかかりますか？" 
                 data-lang-ko="겐도 장비 수리에 걸리는 시간은 얼마나 되나요？" 
                 data-lang-zh-cn="修理我的剑道装备需要多长时间？" 
                 data-lang-zh-tw="修理我的劍道裝備需要多長時間？" 
                 data-lang-es="¿Cuánto tiempo tarda en reparar mi equipo de kendo？"></button>
         <div class="faq-answer">
-          <p data-lang-en="Repairs usually take 2-3 business days depending on the extent of the damage. For more complex repairs, we will inform you about the timeline." 
-             data-lang-ja="修理には通常、損傷の程度によって2～3営業日かかります。より複雑な修理の場合は、期間についてお知らせします。" 
-             data-lang-ko="수리는 일반적으로 손상 정도에 따라 2-3영업일이 소요됩니다. 보다 복잡한 수리의 경우, 시간표를 알려드리겠습니다." 
-             data-lang-zh-cn="根据损坏程度，维修通常需要2-3个工作日。对于更复杂的维修，我们会告知您具体时间安排。" 
-             data-lang-zh-tw="根據損壞程度，維修通常需要2-3個工作日。對於更複雜的維修，我們會告知您具體時間安排。" 
-             data-lang-es="Las reparaciones suelen tardar 2-3 días hábiles según la gravedad del daño. Para reparaciones más complejas, le informaremos sobre el plazo."></p>
+          <p data-lang-en="Repair times vary depending on the service required, but most repairs are completed within 7-14 business days from the time we receive your gear. Custom embroidery and engraving services may take 10-20 business days." 
+             data-lang-ja="修理時間は必要なサービスによって異なりますが、ほとんどの修理は装備を受け取ってから営業日7〜14日で完了します。オーダーメイドの刺繡と彫刻サービスは10〜20営業日かかる場合があります。" 
+             data-lang-ko="수리 시간은 필요한 서비스에 따라 다르지만, 대부분의 수리는 장비를 받은 날부터 영업일 7~14일 이내에 완료됩니다. 맞춤 자수 및 새김 서비스는 10~20영업일이 걸릴 수 있습니다." 
+             data-lang-zh-cn="修理时间因所需服务而异，但大多数修理会在我们收到您的装备后的7-14个工作日内完成。定制刺绣和雕刻服务可能需要10-20个工作日。" 
+             data-lang-zh-tw="修理時間因所需服務而异，但大多數修理會在我們收到您的裝備後的7-14個工作日內完成。定制刺繡和雕刻服務可能需要10-20個工作日。" 
+             data-lang-es="Los tiempos de reparación varían según el servicio requerido, pero la mayoría de las reparaciones se completan dentro de 7-14 días hábiles desde el momento en que recibimos su equipo. Los servicios de bordado y grabado personalizados pueden tardar 10-20 días hábiles."></p>
         </div>
       </div>
       
       <!-- 第2条 -->
       <div class="faq-item">
-        <button class="faq-question" data-lang-en="What types of repairs do you offer?" 
-                data-lang-ja="どのような種類の修理を提供していますか？" 
-                data-lang-ko="어떤 종류의 수리를 제공하나요？" 
-                data-lang-zh-cn="你们提供哪些类型的维修服务？" 
-                data-lang-zh-tw="你們提供哪些類型的維修服務？" 
-                data-lang-es="¿Qué tipos de reparaciones ofrecen？"></button>
-        <div class="faq-answer">
-          <p data-lang-en="We specialize in repairing Kendo gloves (Kote), protective gear (Bogu), and chest protectors (Do). We also offer maintenance services such as cleaning and re-sewing." 
-             data-lang-ja="剣道の小手（Kote）、防具（Bogu）、胸当て（Do）の修理を専門としています。清掃や再縫製などのメンテナンスサービスも提供しています。" 
-             data-lang-ko="저희는 겐도 코테(Kote)、보구(Bogu)、도(Do) 수리를 전문으로 합니다. 청소 및 다시 꿰매기와 같은 유지 관리 서비스도 제공하고 있습니다."
-             data-lang-zh-cn="我们专业修理剑道手套（Kote）、护具（Bogu）和护胸（Do）。我们还提供清洁和重新缝纫等保养服务。" 
-             data-lang-zh-tw="我們專業修理劍道手套（Kote）、護具（Bogu）和護胸（Do）。我們還提供清潔和重新縫紉等保養服務。" 
-             data-lang-es="Nos especializamos en la reparación de Kote, Bogu y Do. También ofrecemos servicios de mantenimiento como limpieza y remendado."></p>
-        </div>
-      </div>
-    
-      <!-- 第3条 -->
-      <div class="faq-item">
-        <button class="faq-question" data-lang-en="How do I send my gear to you for repair?" 
-                data-lang-ja="修理のために装備をどのように送ったらよいですか？" 
-                data-lang-ko="수리를 위해 장비를 어떻게 보내야 합니까？" 
-                data-lang-zh-cn="我如何将装备寄给你们维修？" 
-                data-lang-zh-tw="我如何將裝備寄給你們維修？" 
+        <button class="faq-question" data-lang-en="How do I ship my gear for repair?" 
+                data-lang-ja="修理のために装備を発送するにはどうすればよいですか？" 
+                data-lang-ko="수리를 위해 장비를 배송하려면 어떻게 해야 합니까？" 
+                data-lang-zh-cn="我该如何寄送装备进行修理？" 
+                data-lang-zh-tw="我該如何寄送裝備進行修理？" 
                 data-lang-es="¿Cómo envío mi equipo para reparación？"></button>
         <div class="faq-answer">
-          <p data-lang-en="Simply contact us via our website, and we will provide you with the necessary shipping details and instructions." 
-             data-lang-ja="簡単にウェブサイトからお問い合わせいただくだけで、必要な配送詳細と手順を提供させていただきます。" 
-             data-lang-ko="웹사이트를 통해 간단히 문의하시면 필요한 배송 세부 정보와 지침을 제공해 드리겠습니다." 
-             data-lang-zh-cn="只需通过我们的网站联系我们，我们会为您提供必要的邮寄详情和说明。" 
-             data-lang-zh-tw="只需通過我們的網站聯繫我們，我們會為您提供必要的郵寄詳情和說明。" 
-             data-lang-es="Simplemente contáctenos a través de nuestro sitio web y le proporcionaremos los detalles de envío necesarios e instrucciones."></p>
+          <p data-lang-en="Simply contact us through our website to request a repair authorization. We'll provide you with detailed shipping instructions and our receiving address. Please ensure your gear is properly cleaned and packaged to prevent damage during transit." 
+             data-lang-ja="修理許可をリクエストするには、単に当社のウェブサイトからお問い合わせください。詳細な発送手順と受取住所を提供させていただきます。輸送中の損傷を防ぐため、装備を適切に清掃し、梱包するようにしてください。" 
+             data-lang-ko="수리 승인을 요청하려면 웹사이트를 통해 연락하시면 됩니다. 배송에 대한 자세한 지침과 수령 주소를 제공해 드리겠습니다. 운송 중 손상을 방지하기 위해 장비를 적절히 청소하고 포장해 주시기 바랍니다." 
+             data-lang-zh-cn="只需通过我们的网站联系我们，申请维修授权。我们会向您提供详细的邮寄说明和我们的收货地址。请确保您的装备已妥善清洁和包装，以防止在运输过程中损坏。" 
+             data-lang-zh-tw="只需通過我們的網站聯繫我們，申請維修授權。我們會向您提供詳細的郵寄說明和我們的收貨地址。請確保您的裝備已妥善清潔和包裝，以防止在運輸過程中損壞。" 
+             data-lang-es="Simplemente contáctenos a través de nuestro sitio web para solicitar una autorización de reparación. Le proporcionaremos instrucciones detalladas de envío y nuestra dirección de recepción. Asegúrese de que su equipo esté适当清洁和包装，以防止在运输过程中损坏。"></p>
+        </div>
+      </div>
+      
+      <!-- 第3条 -->
+      <div class="faq-item">
+        <button class="faq-question" data-lang-en="Do you ship internationally?" 
+                data-lang-ja="国際発送をしていますか？" 
+                data-lang-ko="국제 배송을 하고 있습니까？" 
+                data-lang-zh-cn="你们提供国际邮寄服务吗？" 
+                data-lang-zh-tw="你們提供國際郵寄服務嗎？" 
+                data-lang-es="¿Realizan envíos internacionales？"></button>
+        <div class="faq-answer">
+          <p data-lang-en="Yes, we accept international shipments for both repairs and returns. Customers are responsible for all import duties, taxes, and shipping costs. Contact us through our website and we'll provide you with the necessary shipping details and instructions." 
+             data-lang-ja="はい、修理と返送の両方で国際発送を受け付けています。輸入関税、税金、送料はすべて顧客の負担となります。当社のウェブサイトからお問い合わせください。必要な発送詳細と手順を提供させていただきます。" 
+             data-lang-ko="예, 수리 및 반품 모두 국제 배송을 받아들입니다. 수입 관세, 세금 및 배송 비용은 모두 고객의 책임입니다. 웹사이트를 통해 간단히 문의하시면 필요한 배송 세부 정보와 지침을 제공해 드리겠습니다." 
+             data-lang-zh-cn="是的，我们接受国际邮寄的维修和退货。客户需承担所有进口关税、税费和运费。只需通过我们的网站联系我们，我们会为您提供必要的邮寄详情和说明。" 
+             data-lang-zh-tw="是的，我們接受國際郵寄的維修和退貨。客戶需承擔所有進口關稅、稅費和運費。只需通過我們的網站聯繫我們，我們會為您提供必要的郵寄詳情和說明。" 
+             data-lang-es="Sí, aceptamos envíos internacionales tanto para reparaciones como para devoluciones. Los clientes son responsables de todos los derechos de importación, impuestos y costos de envío. Simplemente contáctenos a través de nuestro sitio web y le proporcionaremos los detalles de envío necesarios e instrucciones."></p>
         </div>
       </div>
     
@@ -426,20 +455,20 @@
                 data-lang-es="¿Pueden reparar mi equipo si es de otra marca？"></button>
         <div class="faq-answer">
           <p data-lang-en="Absolutely! We are equipped to handle all brands of Kendo gear." 
-             data-lang-ja="もちろんです！私たちはすべてのブランドの剣道用品に対応できるように準備しています。" 
-             data-lang-ko="물론입니다! 우리는 모든 브랜드의 겐도 장비를 처리할 준비가 되어 있습니다." 
-             data-lang-zh-cn="当然可以！我们有能力处理所有品牌的剑道装备。" 
-             data-lang-zh-tw="當然可以！我們有能力處理所有品牌的劍道裝備。" 
-             data-lang-es="¡Absolutamente! Estamos equipados para manejar todas las marcas de equipos de kendo."></p>
+             data-lang-ja="もちろんです！ すべてのブランドの剣道用品に対応しています。" 
+             data-lang-ko="물론입니다! 모든 브랜드의 겐도 장비를 처리할 수 있습니다." 
+             data-lang-zh-cn="当然可以！我们可以处理所有品牌的剑道装备。" 
+             data-lang-zh-tw="當然可以！我們可以處理所有品牌的劍道裝備。" 
+             data-lang-es="¡Absolutamente! Estamos equipados para manejar todas las marcas de equipos de Kendo."></p>
         </div>
       </div>
     </div>
     
     <!-- Contact部分 -->
     <div class="column contact-column" id="contact">
-      <h2 data-lang-en="Contact Us" data-lang-ja="お問い合わせ" data-lang-ko="연락처" data-lang-zh-cn="联系我们" data-lang-zh-tw="聯繫我們" data-lang-es="Contáctenos"></h2>
-      <form class="contact-form" action="https://formspree.io/f/xjkaevro" method="POST">
-        <input type="text" name="name" placeholder="Your Name" data-lang-en="Your Name" data-lang-ja="名前" data-lang-ko="이름" data-lang-zh-cn="您的姓名" data-lang-zh-tw="您的姓名" data-lang-es="Su nombre" required>
+      <h2 data-lang-en="Contact Us" data-lang-ja="お問い合わせ" data-lang-ko="문의하기" data-lang-zh-cn="联系我们" data-lang-zh-tw="聯繫我們" data-lang-es="Contáctenos"></h2>
+      <form class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" data-lang-en="Your Name" data-lang-ja="お名前" data-lang-ko="이름" data-lang-zh-cn="您的姓名" data-lang-zh-tw="您的姓名" data-lang-es="Su nombre" required>
         <input type="email" name="email" placeholder="Email Address" data-lang-en="Email Address" data-lang-ja="メールアドレス" data-lang-ko="이메일 주소" data-lang-zh-cn="电子邮箱" data-lang-zh-tw="電子郵箱" data-lang-es="Correo electrónico" required>
         <input type="text" name="subject" placeholder="Subject" data-lang-en="Subject" data-lang-ja="件名" data-lang-ko="주제" data-lang-zh-cn="主题" data-lang-zh-tw="主題" data-lang-es="Asunto" required>
         <textarea rows="5" name="message" placeholder="Your Message" data-lang-en="Your Message" data-lang-ja="メッセージ" data-lang-ko="메시지" data-lang-zh-cn="您的留言" data-lang-zh-tw="您的留言" data-lang-es="Su mensaje" required></textarea>
@@ -457,6 +486,7 @@
      data-lang-zh-tw="© 2025 KendoCrafts。保留所有權利。" 
      data-lang-es="© 2025 KendoCrafts。Todos los derechos reservados。"></p>
 </footer>
+
 
 <!-- 延迟加载核心脚本，不阻塞首屏 -->
 <script defer src="js/script.js"></script>
