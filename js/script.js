@@ -1,116 +1,166 @@
-// 导航滚动隐藏/显示
-let lastScrollTop = 0;
-const header = document.getElementById('header');
-const headerHeight = header.offsetHeight;
-
-window.addEventListener('scroll', function() {
-  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  if(scrollTop > lastScrollTop){
-    header.style.top = `-${headerHeight}px`;
-  } else {
-    header.style.top = "0";
-  }
-  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-});
-
-// 轮播功能
-document.querySelectorAll('.carousel').forEach(carousel => {
-  const images = carousel.querySelectorAll('img');
-  let index = 0;
-  if (images.length > 0) {
-    images[index].classList.add('active');
-
-    const prev = carousel.querySelector('.prev');
-    const next = carousel.querySelector('.next');
-
-    if (prev) {
-      prev.addEventListener('click', () => {
-        images[index].classList.remove('active');
-        index = (index - 1 + images.length) % images.length;
-        images[index].classList.add('active');
-      });
-    }
-
-    if (next) {
-      next.addEventListener('click', () => {
-        images[index].classList.remove('active');
-        index = (index + 1) % images.length;
-        images[index].classList.add('active');
-      });
-    }
-  }
-});
-
-// 多语言切换功能
+// 页面加载完成后执行
 document.addEventListener('DOMContentLoaded', function() {
-  // 检测用户浏览器语言并设置默认语言
-  const userLang = navigator.language || navigator.userLanguage;
-  let defaultLang = 'en';
+  // 多语言切换功能
+  const langSelect = document.getElementById('lang-select');
+  const sidebarLangSelect = document.getElementById('sidebar-lang-select');
   
-  if (userLang.startsWith('ja')) {
-    defaultLang = 'ja';
-  } else if (userLang.startsWith('ko')) {
-    defaultLang = 'ko';
-  } else if (userLang.startsWith('zh-CN') || userLang.startsWith('zh-SG')) {
-    defaultLang = 'zh-cn';
-  } else if (userLang.startsWith('zh-TW') || userLang.startsWith('zh-HK')) {
-    defaultLang = 'zh-tw';
-  } else if (userLang.startsWith('es')) {
-    defaultLang = 'es';
+  // 初始化语言为英语
+  setLanguage('en');
+  
+  // 语言选择器事件
+  langSelect.addEventListener('change', function() {
+    setLanguage(this.value);
+  });
+  
+  sidebarLangSelect.addEventListener('change', function() {
+    setLanguage(this.value);
+    langSelect.value = this.value;
+  });
+  
+  // 设置语言函数
+  function setLanguage(lang) {
+    // 更新所有带有data-lang属性的元素
+    document.querySelectorAll('[data-lang-' + lang + ']').forEach(element => {
+      const attr = 'data-lang-' + lang;
+      if (element.tagName === 'INPUT' && element.getAttribute('placeholder')) {
+        element.placeholder = element.getAttribute(attr);
+      } else {
+        element.textContent = element.getAttribute(attr);
+      }
+    });
+    
+    // 更新图片alt属性
+    document.querySelectorAll('img[data-lang-' + lang + ']').forEach(img => {
+      img.alt = img.getAttribute('data-lang-' + lang);
+    });
   }
   
-  // 从本地存储读取用户偏好语言
-  const savedLang = localStorage.getItem('preferredLanguage');
-  if (savedLang) {
-    defaultLang = savedLang;
-  }
+  // 轮播图功能
+  const carousels = document.querySelectorAll('.carousel');
   
-  // 设置默认语言
-  setLanguage(defaultLang);
-  document.getElementById('lang-select').value = defaultLang;
-  
-  // 语言选择事件
-  document.getElementById('lang-select').addEventListener('change', function() {
-    const lang = this.value;
-    setLanguage(lang);
-    localStorage.setItem('preferredLanguage', lang);
-  });
-});
-
-// 设置语言函数
-function setLanguage(lang) {
-  // 更新文本内容
-  document.querySelectorAll(`[data-lang-${lang}]`).forEach(element => {
-    const content = element.getAttribute(`data-lang-${lang}`);
-    if (content) {
-      element.textContent = content;
+  carousels.forEach(carousel => {
+    const images = carousel.querySelectorAll('img');
+    const prevBtn = carousel.querySelector('.prev');
+    const nextBtn = carousel.querySelector('.next');
+    let currentIndex = 0;
+    
+    // 显示当前图片
+    function showImage(index) {
+      images.forEach(img => img.classList.remove('active'));
+      images[index].classList.add('active');
     }
+    
+    // 上一张
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage(currentIndex);
+    });
+    
+    // 下一张
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+    });
+    
+    // 自动轮播
+    let interval = setInterval(() => {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+    }, 5000);
+    
+    // 鼠标悬停时暂停轮播
+    carousel.addEventListener('mouseenter', () => {
+      clearInterval(interval);
+    });
+    
+    // 鼠标离开时恢复轮播
+    carousel.addEventListener('mouseleave', () => {
+      interval = setInterval(() => {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+      }, 5000);
+    });
   });
   
-  // 更新图片alt属性
-  document.querySelectorAll(`img[data-lang-${lang}]`).forEach(img => {
-    const altText = img.getAttribute(`data-lang-${lang}`);
-    if (altText) {
-      img.alt = altText;
-    }
-  });
+  // FAQ折叠功能
+  const faqQuestions = document.querySelectorAll('.faq-question');
   
-  // 更新输入框占位符
-  document.querySelectorAll(`[data-placeholder-${lang}]`).forEach(input => {
-    const placeholder = input.getAttribute(`data-placeholder-${lang}`);
-    if (placeholder) {
-      input.placeholder = placeholder;
-    }
-  });
-}
-// FAQ折叠功能
-document.querySelectorAll('.faq-question').forEach(question => {
+  faqQuestions.forEach(question => {
     question.addEventListener('click', () => {
-      // 切换当前问题的激活状态
+      // 切换当前问题的活跃状态
       question.classList.toggle('active');
       
-      // 切换对应答案的显示状态
+      // 获取对应的答案元素
       const answer = question.nextElementSibling;
+      
+      // 切换答案的显示状态
       answer.classList.toggle('active');
     });
   });
+  
+  // 菜单切换功能
+  const menuToggle = document.querySelector('.menu-toggle');
+  const sidebarNav = document.querySelector('.sidebar-nav');
+  const overlay = document.querySelector('.overlay');
+  
+  // 同步两个语言选择器
+  langSelect.addEventListener('change', () => {
+    sidebarLangSelect.value = langSelect.value;
+  });
+  
+  // 切换侧边栏显示状态
+  function toggleSidebar() {
+    sidebarNav.classList.toggle('active');
+    overlay.classList.toggle('active');
+    document.body.classList.toggle('overflow-hidden'); // 防止背景滚动
+  }
+  
+  menuToggle.addEventListener('click', toggleSidebar);
+  overlay.addEventListener('click', toggleSidebar);
+  
+  // 点击侧边栏链接后关闭侧边栏
+  document.querySelectorAll('.sidebar-nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 768) {
+        toggleSidebar();
+      }
+    });
+  });
+  
+  // 窗口大小变化时自动调整导航显示方式
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      sidebarNav.classList.remove('active');
+      overlay.classList.remove('active');
+      document.body.classList.remove('overflow-hidden');
+    }
+  });
+  
+  // 导航栏滚动效果
+  let lastScrollTop = 0;
+  const header = document.getElementById('header');
+  
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    // 向下滚动超过100px时隐藏导航栏，向上滚动时显示
+    if (scrollTop > lastScrollTop && scrollTop > 100) {
+      header.style.top = '-80px';
+    } else {
+      header.style.top = '0';
+    }
+    
+    lastScrollTop = scrollTop;
+  });
+  
+  // 表单提交处理
+  const contactForm = document.querySelector('.contact-form');
+  
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // 在实际应用中，这里会有表单提交到服务器的代码
+    alert('Thank you for your message! We will get back to you soon.');
+    this.reset();
+  });
+});

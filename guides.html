@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprehensive guides for kendo equipment care and maintenance">
+    <title data-i18n="guides.title">Guides - KendoCrafts</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/guides.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header id="header">
+        <div class="header-container">
+          <div class="logo">
+            <img src="images/kendocrafts-logo.webp" alt="KendoCrafts Logo" loading="eager">
+          </div>
+      
+          <!-- 桌面导航，与 index.html 一致 -->
+          <nav class="desktop-nav">
+            <a href="index.html#home" data-lang-en="Home" data-lang-ja="ホーム" data-lang-ko="홈" data-lang-zh-cn="首页" data-lang-zh-tw="首頁" data-lang-es="Inicio"></a>
+            <a href="index.html#kote" data-lang-en="Kote Repair" data-lang-ja="小手修理" data-lang-ko="코테 수리" data-lang-zh-cn="手套修复" data-lang-zh-tw="手套修復" data-lang-es="Reparación de Kote"></a>
+            <a href="index.html#men" data-lang-en="Men Refinishing" data-lang-ja="面塗装" data-lang-ko="먼 재도색" data-lang-zh-cn="面护具翻新" data-lang-zh-tw="面護具翻新" data-lang-es="Refinamiento de Men"></a>
+            <a href="index.html#embroidery" data-lang-en="Embroidery" data-lang-ja="刺繡" data-lang-ko="자수" data-lang-zh-cn="刺绣" data-lang-zh-tw="刺繡" data-lang-es="Bordado"></a>
+            <a href="index.html#engraving" data-lang-en="Shinai Engraving" data-lang-ja="竹刀彫刻" data-lang-ko="신나이 새김" data-lang-zh-cn="竹剑雕刻" data-lang-zh-tw="竹劍雕刻" data-lang-es="Grabado en Shinai"></a>
+            <a href="index.html#about" data-lang-en="About Us" data-lang-ja="会社概要" data-lang-ko="회사 소개" data-lang-zh-cn="关于我们" data-lang-zh-tw="關於我們" data-lang-es="Sobre Nosotros"></a>
+            <a href="index.html#faq" data-lang-en="FAQ" data-lang-ja="よくある質問" data-lang-ko="자주 묻는 질문" data-lang-zh-cn="常见问题" data-lang-zh-tw="常見問題" data-lang-es="Preguntas Frecuentes"></a>
+            <a href="guides.html" class="active" data-lang-en="Guides" data-lang-ja="ガイド" data-lang-ko="가이드" data-lang-zh-cn="指南" data-lang-zh-tw="指南" data-lang-es="Guías"></a>
+            <a href="index.html#contact" data-lang-en="Contact" data-lang-ja="お問い合わせ" data-lang-ko="연락처" data-lang-zh-cn="联系我们" data-lang-zh-tw="聯繫我們" data-lang-es="Contacto"></a>
+          </nav>
+      
+          <!-- 语言选择器（与首页一致） -->
+          <div class="language-selector">
+            <select id="lang-select">
+              <option value="en">English</option>
+              <option value="ja">日本語</option>
+              <option value="ko">한국어</option>
+              <option value="zh-cn">简体中文</option>
+              <option value="zh-tw">繁體中文</option>
+              <option value="es">Español</option>
+            </select>
+          </div>
+      
+          <!-- 移动端菜单按钮（首页同款） -->
+          <button class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      
+        <!-- 侧边栏导航（首页同款） -->
+        <nav class="sidebar-nav">
+          <a href="index.html#home" data-lang-en="Home" data-lang-ja="ホーム" data-lang-ko="홈" data-lang-zh-cn="首页" data-lang-zh-tw="首頁" data-lang-es="Inicio"></a>
+          <a href="index.html#kote" data-lang-en="Kote Repair" data-lang-ja="小手修理" data-lang-ko="코테 수리" data-lang-zh-cn="手套修复" data-lang-zh-tw="手套修復" data-lang-es="Reparación de Kote"></a>
+          <a href="index.html#men" data-lang-en="Men Refinishing" data-lang-ja="面塗装" data-lang-ko="먼 재도색" data-lang-zh-cn="面护具翻新" data-lang-zh-tw="面護具翻新" data-lang-es="Refinamiento de Men"></a>
+          <a href="index.html#embroidery" data-lang-en="Embroidery" data-lang-ja="刺繡" data-lang-ko="자수" data-lang-zh-cn="刺绣" data-lang-zh-tw="刺繡" data-lang-es="Bordado"></a>
+          <a href="index.html#engraving" data-lang-en="Shinai Engraving" data-lang-ja="竹刀彫刻" data-lang-ko="신나이 새김" data-lang-zh-cn="竹剑雕刻" data-lang-zh-tw="竹劍雕刻" data-lang-es="Grabado en Shinai"></a>
+          <a href="index.html#about" data-lang-en="About Us" data-lang-ja="会社概要" data-lang-ko="회사 소개" data-lang-zh-cn="关于我们" data-lang-zh-tw="關於我們" data-lang-es="Sobre Nosotros"></a>
+          <a href="index.html#faq" data-lang-en="FAQ" data-lang-ja="よくある質問" data-lang-ko="자주 묻는 질문" data-lang-zh-cn="常见问题" data-lang-zh-tw="常見問題" data-lang-es="Preguntas Frecuentes"></a>
+          <a href="guides.html" class="active" data-lang-en="Guides" data-lang-ja="ガイド" data-lang-ko="가이드" data-lang-zh-cn="指南" data-lang-zh-tw="指南" data-lang-es="Guías"></a>
+          <a href="index.html#contact" data-lang-en="Contact" data-lang-ja="お問い合わせ" data-lang-ko="연락처" data-lang-zh-cn="联系我们" data-lang-zh-tw="聯繫我們" data-lang-es="Contacto"></a>
+      
+          <div style="padding: 15px 25px; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 10px;">
+            <select id="sidebar-lang-select" style="width: 100%;">
+              <option value="en">English</option>
+              <option value="ja">日本語</option>
+              <option value="ko">한국어</option>
+              <option value="zh-cn">简体中文</option>
+              <option value="zh-tw">繁體中文</option>
+              <option value="es">Español</option>
+            </select>
+          </div>
+        </nav>
+      
+        <!-- 遮罩层 -->
+        <div class="overlay"></div>
+      </header>
+      
+
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+    <main class="guides-container">
+        <div class="guides-content">
+            <div class="main-content">
+                <article class="guide-card">
+                    <div class="guide-image">
+                        <img src="images/kendo-basics.webp" alt="Kendo Kote Maintenance" 
+                             data-lang-en="Kendo Kote Maintenance" 
+                             data-lang-ja="剣道小手のメンテナンス" 
+                             data-lang-ko="겐도 코테 유지 관리" 
+                             data-lang-zh-cn="剑道手套保养" 
+                             data-lang-zh-tw="劍道手套保養" 
+                             data-lang-es="Mantenimiento de Kote de kendo" loading="lazy">
+                    </div>
+                    <div class="guide-info">
+                        <h2 data-lang-en="Kendo Basics – A Beginner’s Guide to Kendo" data-lang-ja="剣道入門～初心者のための基本ガイド～" data-lang-ko="검도 입문 - 초보자를 위한 기초 가이드" data-lang-zh-cn="剑道基础——新手指南" data-lang-zh-tw="劍道基礎——新手指南" data-lang-es="Kendo Básico - Una Guía para Principiantes"></h2>
+                        <div class="guide-meta">
+                            <span data-lang-en="Updated: November 23, 2025" data-lang-ja="更新日: 2025年11月23日" data-lang-ko="업데이트: 2025년 11월 23일" data-lang-zh-cn="更新时间：2025年11月23日" data-lang-zh-tw="更新時間：2025年11月23日" data-lang-es="Actualizado: 23 de noviembre de 2025"></span>
+                            <span>•</span>
+                            <span data-lang-en="Category: Kendo Basics" data-lang-ja="カテゴリー: 剣道の基本" data-lang-ko="카테고리: 검도 기본" data-lang-zh-cn="分类：剑道基础" data-lang-zh-tw="分類：劍道基礎" data-lang-es="Categoría: Kendo Básico"></span>
+                        </div>
+                        <p data-lang-en="Kendo, the “way of the sword,” is a traditional Japanese martial art that emphasizes not only physical skill but also mental discipline and personal development. For beginners, understanding the basics of Kendo is essential before stepping onto the dojo floor or participating in competitions. This guide will introduce the essential knowledge every Kendo beginner should know, from equipment to etiquette, to help you start your journey with confidence." data-lang-ja="剣道は、「剣の道」を意味する日本の伝統武道であり、単なる技術の習得だけでなく、精神の鍛錬と人間形成を重んじます。初心者は、道場に足を踏み入れたり、試合に参加したりする前に、剣道の基本を理解することが不可欠です。このガイドでは、防具から礼儀に至るまで、剣道を始める方が知っておくべき基本知識を紹介します。自信を持って剣道の旅を始めましょう。" data-lang-ko="검도, “검의 길”을 의미하는 일본 전통 무술로, 단순한 신체적 기술뿐만 아니라 정신적 수양과 인격 발전을 중시합니다. 초보자의 경우 도장에 첫 발을 내딛거나 대회에 참가하기 전에 검도의 기초를 이해하는 것이 필수적입니다. 본 가이드는 장비에서 예절에 이르기까지 모든 검도 초보자가 알아야 할 필수 지식을 소개하여 자신감을 가지고 검도 여정을 시작할 수 있도록 도와줍니다." data-lang-zh-cn="剑道，意为“剑之道”，是一种传统的日本武术，它不仅强调身体技能，也同样重视精神修养与个人发展。对于初学者而言，在踏入道场或参加比赛之前，理解剑道的基础知识至关重要。本指南将介绍每位剑道新手都应了解的从装备到礼仪的必备知识，助您自信地开启剑道之旅。" data-lang-zh-tw="劍道，意為「劍之道」，是一種傳統的日本武術，它不僅強調身體技能，也同樣重視精神修養與個人發展。對於初學者而言，在踏入道場或參加比賽之前，理解劍道的基礎知識至關重要。本指南將介紹每位劍道新手都應了解的從裝備到禮儀的必備知識，助您自信地開啟劍道之旅。" data-lang-es="El Kendo, el “camino de la espada”, es un arte marcial japonés tradicional que enfatiza no solo la habilidad física, sino también la disciplina mental y el desarrollo personal. Para los principiantes, comprender los fundamentos del Kendo es esencial antes de pisar el dojo o participar en competencias. Esta guía presentará el conocimiento esencial que todo principiante debe conocer, desde el equipo hasta la etiqueta, para ayudarte a comenzar tu viaje con confianza."></p>
+                        <h3 data-lang-en="The Essence of Kendo" data-lang-ja="剣道の本質" data-lang-ko="검도의 본질" data-lang-zh-cn="剑道的精髓" data-lang-zh-tw=" 劍道的精髓" data-lang-es="La Esencia del Kendo"></h3>
+                        <p data-lang-en="Kendo is more than just striking with a bamboo sword (shinai); it is a path of self-improvement. Practitioners aim to cultivate mind, body, and spirit, emphasizing respect, discipline, and continuous learning. The ultimate goal is not only to score points in matches but also to develop character and composure under pressure." data-lang-ja="剣道は、竹刀で打つだけのものではありません。それは自己鍛錬の道です。修練者は心身と精神を磨き、礼節、規律、不断の学習を重視します。その究極の目標は、試合でポイントを取ることだけでなく、人格を形成し、プレッシャーの中でも冷静さを保つ力を養うことです。" data-lang-ko="검도는 단순히 죽도로 상대를 치는 것이 아닌, 자기 수양의 길입니다. 수련자는 마음,身体, 정신을 함양하며 존중, 규율, 지속적인 학습을 강조합니다. 궁극적인 목표는 시합에서 점수를 얻는 것뿐만 아니라 인격을 발전시키고 압박 속에서도 침착함을 유지하는 능력을 기르는 데 있습니다." data-lang-zh-cn="剑道不仅仅是使用竹刀进行劈刺；它更是一条自我完善的修行之路。修习者旨在陶冶身心与精神，强调尊重、纪律和持续学习。其终极目标不仅是在比赛中得分，更在于培养品格，以及在压力下保持沉着冷静的能力。" data-lang-zh-tw="劍道不僅僅是使用竹刀進行劈刺；它更是一條自我完善的修行之路。修習者旨在陶冶身心與精神，強調尊重、紀律和持續學習。其終極目標不僅是在比賽中得分，更在於培養品格，以及在壓力下保持沉著冷靜的能力。" data-lang-es="El Kendo es más que solo golpear con una espada de bambú (shinai); es un camino de superación personal. Los practicantes buscan cultivar la mente, el cuerpo y el espíritu, haciendo hincapié en el respeto, la disciplina y el aprendizaje continuo. El objetivo final no es solo anotar puntos en los combates, sino también desarrollar el carácter y la compostura bajo presión."></p>
+                        <h3 data-lang-en="Understanding Kendo Equipment" data-lang-ja="剣道の防具を理解する" data-lang-ko="검도 장비 이해하기" data-lang-zh-cn="了解剑道装备" data-lang-zh-tw="了解劍道裝備" data-lang-es="Comprendiendo el Equipo de Kendo"></h3>
+                        <p data-lang-en="A Kendo practitioner uses several essential pieces of equipment. These include the shinai, a bamboo sword used for striking; bogu, the protective armor; and the traditional keikogi and hakama." data-lang-ja="剣道では、いくつかの基本的な防具を使用します。これらには、打突に用いる竹刀、防具であるぼうぐ、そして伝統的な稽古着と袴が含まれます。" data-lang-ko="검도 수련자는 몇 가지 필수 장비를 사용합니다. 여기에는 치는 데 사용하는 죽도, 보호 장비인 보구, 그리고 전통적인 검도복과 하카마가 포함됩니다." data-lang-zh-cn="剑道修习者需要使用几种基本装备。其中包括：用于劈刺的竹刀；防护用具“防具”；以及传统的剑道衣和袴。" data-lang-zh-tw="劍道修習者需要使用幾種基本裝備。其中包括：用於劈刺的竹刀；防護用具「防具」；以及傳統的劍道衣和袴。" data-lang-es="Un practicante de Kendo utiliza varias piezas esenciales de equipo. Estas incluyen el shinai, la espada de bambú utilizada para golpear; el bogu, la armadura protectora; y el keikogi y hakama tradicionales."></p>
+                        <ul class="guide-steps">
+                            <li data-lang-en=" Bogu consists of four main parts:" data-lang-ja="防具は主に4つの部分から成ります：" data-lang-ko="보구는 크게 네 부분으로 구성됩니다:" data-lang-zh-cn="防具主要由四个部分组成：" data-lang-zh-tw="防具主要由四個部分組成：" data-lang-es="El bogu consta de cuatro partes principales:"></li>
+                            <li data-lang-en="Men – protects the head, face, and throat." data-lang-ja="面 – 頭部、顔、喉を保護します。" data-lang-ko="면 – 머리, 얼굴, 목을 보호합니다." data-lang-zh-cn="面 – 保护头部、脸部和喉咙。" data-lang-zh-tw="面 – 保護頭部、臉部和喉嚨。" data-lang-es="Men – protege la cabeza, el rostro y la garganta."></li>
+                            <li data-lang-en="Do – protects the torso." data-lang-ja="胴 – 胴体を保護します。" data-lang-ko="동 – 몸통을 보호합니다." data-lang-zh-cn="胴 – 保护躯干。" data-lang-zh-tw="胴 – 保護軀幹。" data-lang-es="Do – protege el torso."></li>
+                            <li data-lang-en="Kote – protects the hands and forearms." data-lang-ja="小手 – 手と前腕を保護します。" data-lang-ko="코테 – 손과 팔뚝을 보호합니다." data-lang-zh-cn="小手 – 保护手和前臂。" data-lang-zh-tw="小手 – 保護手和前臂。" data-lang-es="Kote – protege las manos y los antebrazos."></li>
+                            <li data-lang-en="Tare – protects the waist and hips." data-lang-ja="垂 – 腰と臀部を保護します。" data-lang-ko="타레 – 허리와 엉덩이를 보호합니다." data-lang-zh-cn="垂 – 保护腰部和臀部。" data-lang-zh-tw="垂 – 保護腰部和臀部。" data-lang-es="Tare – protege la cintura y las caderas."></li>
+                            <li data-lang-en="Keikogi and Hakama are the traditional uniform. Keikogi is a thick jacket, usually cotton, designed for comfort and durability. Hakama is a wide, pleated skirt-like garment that allows for mobility and proper footwork. Proper sizing is essential for safety and comfort during practice." data-lang-ja="稽古着と袴は伝統的な道着です。稽古着は、通気性と耐久性に優れた厚手の綿製の上着です。袴は、動きやすく、正確な足捌きを可能にする、ひだの付いたゆったりとした袴です。安全で快適な稽古のためには、適切なサイズを選ぶことが重要です。" data-lang-ko="검도복과 하카마는 전통적인 도복입니다. 검도복은 편안함과 내구성을 위해 설계된 두꺼운 면 소재의 상의입니다. 하카마는 움직임의 자유와 올바른 발놀림을 가능하게 하는 주름이 잡힌 넓은 바지입니다. 안전하고 편안한 수련을 위해서는 적절한 사이즈를 선택하는 것이 중요합니다." data-lang-zh-cn="剑道衣和袴是传统的练习服。剑道衣通常为棉质厚上衣，设计注重舒适与耐用。袴是一种宽大的、带褶的裙裤，便于活动并允许正确的步法。选择合适的尺寸对于练习期间的安全和舒适至关重要。" data-lang-zh-tw="劍道衣和袴是傳統的練習服。劍道衣通常為棉質厚上衣，設計注重舒適與耐用。袴是一種寬大的、帶褶的裙褲，便於活動並允許正確的步法。選擇合適的尺寸對於練習期間的安全和舒適至關重要。" data-lang-es="El Keikogi y el Hakama son el uniforme tradicional. El keikogi es una chaqueta gruesa, usualmente de algodón, diseñada para comodidad y durabilidad. El hakama es una prenda amplia y plisada similar a un pantalón falda que permite la movilidad y un trabajo de pies adecuado. El tamaño correcto es esencial para la seguridad y comodidad durante la práctica."></li>
+                        </ul>
+                        <h3 data-lang-en="Basic Techniques and Movements" data-lang-ja="基本技と動作" data-lang-ko="기본 기술과 동작" data-lang-zh-cn="基本技术与动作" data-lang-zh-tw="基本技術與動作" data-lang-es="Técnicas y Movimientos Básicos"></h3>
+                        <p data-lang-en="Beginners start by learning the fundamental footwork (ashi-sabaki) and basic strikes (suburi). Footwork teaches proper balance and posture, while suburi practices help develop accuracy, speed, and strength. The four basic strikes are: men, kote, do, and tsuki (thrust to the throat). Each strike must be executed with correct form and accompanied by kiai, a spirited shout demonstrating intent and focus." data-lang-ja="初心者は、基本的な足捌きと素振りから学び始めます。足捌きは正しいバランスと姿勢を教え、素振りは正確さ、速さ、力を養うのに役立ちます。4つの基本打突は、面、小手、胴、そして突き（喉への突き）です。それぞれの打突は正しい形で実行され、気合いと呼ばれる、意志と集中力を示す力強い掛け声を伴わなければなりません。" data-lang-ko="초보자는 기본적인 발놀림과 기본 치기부터 배우기 시작합니다. 발놀림은 적절한 균형과 자세를 가르치며, 기본 치기 연습은 정확성, 속도 및 힘을 기르는 데 도움을 줍니다. 네 가지 기본 치기는 면, 코테, 동, 그리고 쓰키(목 찌르기)입니다. 각 치기는 올바른 자세로 실행되어야 하며, 의지와 집중력을 나타내는 기합을 동반해야 합니다." data-lang-zh-cn="初学者从学习基本的步法和基本的挥刀（素振）开始。步法教授如何保持平衡与姿势，而素振练习则有助于培养准确性、速度和力量。四种基本打击部位为：面、小手、胴以及刺击（对喉咙的刺击）。每一次打击都必须以正确的形式执行，并配合“气合”——一种展现意图和专注力的精神呐喊。" data-lang-zh-tw="初學者從學習基本的步法和基本的揮刀（素振）開始。步法教授如何保持平衡與姿勢，而素振練習則有助於培養準確性、速度和力量。四種基本打擊部位為：面、小手、胴以及刺擊（對喉嚨的刺擊）。每一次打擊都必須以正確的形式執行，並配合「氣合」——一種展現意圖和專注力的精神吶喊。" data-lang-es="Los principiantes comienzan aprendiendo el trabajo de pies básico (ashi-sabaki) y los golpes básicos (suburi). El trabajo de pies enseña el equilibrio y la postura correctos, mientras que los suburi ayudan a desarrollar precisión, velocidad y fuerza. Los cuatro golpes básicos son: men, kote, do y tsuki (estocada a la garganta). Cada golpe debe ejecutarse con la forma correcta y acompañarse de kiai, un grito enérgico que demuestra intención y enfoque."></p>
+                        <h3 data-lang-en="Kendo Etiquette" data-lang-ja=" 剣道の礼儀" data-lang-ko="검도 예절" data-lang-zh-cn="剑道礼仪" data-lang-zh-tw="劍道禮儀" data-lang-es="Etiqueta en el Kendo"></h3>
+                        <p data-lang-en="Etiquette is an integral part of Kendo. Bowing before and after practice, maintaining a clean and organized dojo, and showing respect to instructors and fellow practitioners are fundamental. Proper etiquette fosters discipline, humility, and a sense of community within the dojo. Beginners should pay close attention to etiquette as it reflects one’s attitude and commitment to the art." data-lang-ja="礼法は剣道の重要な一部です。稽古の前後の礼、清潔で整頓された道場の維持、指導者や仲間への敬意を示すことは基本です。正しい礼法は、規律、謙虚さ、そして道場内での共同体意識を育みます。初心者は、礼法が剣道への姿勢と取り組み方を反映するため、細心の注意を払うべきです。" data-lang-ko="예절은 검도의 핵심 부분입니다. 수련 전후의 인사, 청결하고 정돈된 도장 유지, 지도자와 동료 수련자에 대한 존중은 기본입니다. 올바른 예절은 도장 내에서 규율, 겸손 및 공동체 의식을 함양합니다. 초보자는 예절이 검도에 대한 자신의 태도와 헌신을 반영하기 때문에 세심히 주의를 기울여야 합니다." data-lang-zh-cn="礼仪是剑道不可分割的一部分。练习前后行礼、保持道场整洁有序、向导师和道友表示尊重，这些都是基本原则。正确的礼仪能培养纪律性、谦逊感以及道场内的团体意识。初学者应密切关注礼仪，因为它反映了一个人对剑道的态度和投入程度。" data-lang-zh-tw="禮儀是劍道不可分割的一部分。練習前後行禮、保持道場整潔有序、向導師和道友表示尊重，這些都是基本原則。正確的禮儀能培養紀律性、謙遜感以及道場內的團體意識。初學者應密切關注禮儀，因為它反映了一個人對劍道的態度和投入程度。" data-lang-es="La etiqueta es una parte integral del Kendo. Saludar antes y después de la práctica, mantener un dojo limpio y ordenado, y mostrar respeto a los instructores y compañeros son fundamentales. La etiqueta adecuada fomenta la disciplina, la humildad y un sentido de comunidad dentro del dojo. Los principiantes deben prestar mucha atención a la etiqueta, ya que refleja su actitud y compromiso con el arte."></p>
+                        <h3 data-lang-en="Progression and Ranking" data-lang-ja="上達と段級位" data-lang-ko="진급과 등급" data-lang-zh-cn="晋级与段级制度" data-lang-zh-tw="晉級與段級制度" data-lang-es="Progresión y Sistema de Grados"></h3>
+                        <p data-lang-en="Kendo uses a ranking system called dan/kyu. Beginners typically start at the lowest kyu level and progress through examinations and competitions. Understanding the ranking system helps beginners set realistic goals and measure their development over time. Progression requires dedication, consistent practice, and mastery of both physical techniques and mental composure." data-lang-ja="剣道には、段/級という階級制度があります。初心者は通常、最も低い級から始め、審査や試合を通じて上達していきます。この階級制度を理解することは、現実的な目標を設定し、長期的な成長を測るのに役立ちます。上達には、献身、継続的な稽古、そして技術と精神の統一の習得が必要です。" data-lang-ko="검도는 단/급 시스템을 사용합니다. 초보자는 일반적으로 가장 낮은 급에서 시작하여 심사와 대회를 통해 발전합니다. 등급 시스템을 이해하면 초보자가 현실적인 목표를 설정하고 시간이 지남에 따른 자신의 발전을 측정하는 데 도움이 됩니다. 진급에는 헌신, 꾸준한 수련, 그리고 신체적 기술과 정신적 침착함 모두에 대한 숙달이 필요합니다." data-lang-zh-cn="剑道采用“段/级”的等级制度。初学者通常从最低的级开始，通过考试和比赛逐步晋升。了解段级制度有助于初学者设定现实的目标，并衡量自己长期的发展。晋级需要专注投入、持续的练习以及对身体技术和精神沉着的掌握。" data-lang-zh-tw="劍道採用「段/級」的等級制度。初學者通常從最低的級開始，通過考試和比賽逐步晉升。了解段級制度有助於初學者設定現實的目標，並衡量自己長期的發展。晉級需要 dedication（奉獻）、持續的練習以及對身體技術和精神沉著的掌握。" data-lang-es="El Kendo utiliza un sistema de grados llamado dan/kyu. Los principiantes suelen comenzar en el nivel kyu más bajo y progresan mediante exámenes y competencias. Comprender el sistema de grados ayuda a los principiantes a establecer metas realistas y medir su desarrollo con el tiempo. La progresión requiere dedicación, práctica constante y dominio tanto de las técnicas físicas como de la compostura mental."></p>
+                        <h3 data-lang-en="Choosing the Right Dojo and Instructor" data-lang-ja="適切な道場と指導者の選び方" data-lang-ko="적합한 도장과 지도자 선택하기" data-lang-zh-cn="选择合适的道场与导师" data-lang-zh-tw="選擇合適的道場與導師" data-lang-es="Elegir el Dojo y el Instructor Correctos"></h3>
+                        <p data-lang-en="Selecting a dojo with experienced instructors and a supportive environment is crucial. Beginners should look for dojos that offer structured training programs, safety guidelines, and opportunities for sparring (jigeiko) in a controlled manner. Learning from qualified instructors ensures correct technique, minimizes injury risk, and accelerates progress." data-lang-ja="経験豊富な指導者と支援的な環境を持つ道場を選ぶことは非常に重要です。初心者は、体系化された稽古プログラム、安全基準、そして統制の取れた形での地稽古の機会を提供する道場を探すべきです。資格のある指導者から学ぶことは、正確な技術を保証し、怪我のリスクを最小限に抑え、上達を加速させます。" data-lang-ko="경험 많은 지도자와 지원적인 환경을 가진 도장을 선택하는 것은 매우 중요합니다. 초보자는 체계化的인 훈련 프로그램, 안전 지침 및 통제된 환경下的 자유 대련 기회를 제공하는 도장을 찾아야 합니다. 자격을 갖춘 지도자에게 배우는 것은 올바른 기술을 보장하고 부상 위험을 최소화하며 진보를 가속화합니다." data-lang-zh-cn="选择一个拥有经验丰富导师和支持性环境的道场至关重要。初学者应寻找那些提供结构化训练课程、安全指导方针以及受控环境下自由稽古机会的道场。向合格的导师学习能确保技术正确，最大限度地降低受伤风险，并加速进步。" data-lang-zh-tw="選擇一個擁有經驗豐富導師和支持性環境的道場至關重要。初學者應尋找那些提供結構化訓練課程、安全指導方針以及受控環境下自由稽古機會的道場。向合格的導師學習能確保技術正確，最大限度地降低受傷風險，並加速進步。" data-lang-es="Seleccionar un dojo con instructores experimentados y un ambiente de apoyo es crucial. Los principiantes deben buscar dojos que ofrezcan programas de entrenamiento estructurados, pautas de seguridad y oportunidades de sparring (jigeiko) de manera controlada. Aprender de instructores calificados asegura la técnica correcta, minimiza el riesgo de lesiones y acelera el progreso."></p>
+                        <h3 data-lang-en="Common Beginner Challenges" data-lang-ja="初心者が直面する一般的な課題" data-lang-ko="초보자가 일반적으로 겪는 어려움" data-lang-zh-cn="初学者常见挑战" data-lang-zh-tw="初學者常見挑戰" data-lang-es="Desafíos Comunes para Principiantes"></h3>
+                        <p data-lang-en="Many beginners struggle with maintaining proper posture, coordinating footwork with strikes, and managing fatigue during long practice sessions. Patience and consistent practice are key. Tracking progress, asking questions, and observing advanced practitioners can help overcome these challenges." data-lang-ja="多くの初心者は、正しい姿勢の維持、足捌きと打突の連動、長い稽古中の疲労の管理に苦労します。忍耐と継続的な稽古が鍵です。上達の記録、質問、上級者の観察は、これらの課題を乗り越えるのに役立ちます。" data-lang-ko="많은 초보자들은 올바른 자세 유지, 발놀림과 치기의 협응, 긴 수련 동안의 피로 관리에 어려움을 겪습니다. 인내와 꾸준한 연습이 핵심입니다. 진도 상황을 기록하고, 질문하며, 고급 수련자를 관찰하는 것이 이러한 어려움을 극복하는 데 도움이 될 수 있습니다." data-lang-zh-cn="许多初学者在保持正确姿势、协调步法与打击动作以及管理长时间练习中的疲劳方面会遇到困难。耐心和持续的练习是关键。记录进度、提出问题并观察高级修习者，有助于克服这些挑战。" data-lang-zh-tw="許多初學者在保持正確姿勢、協調步法與打擊動作以及管理長時間練習中的疲勞方面會遇到困難。耐心和持續的練習是關鍵。記錄進度、提出問題並觀察高階修習者，有助於克服這些挑戰。" data-lang-es="Muchos principiantes luchan con mantener la postura correcta, coordinar el trabajo de pies con los golpes y manejar la fatiga durante las sesiones de práctica largas. La paciencia y la práctica constante son clave. Llevar un registro del progreso, hacer preguntas y observar a practicantes avanzados puede ayudar a superar estos desafíos."></p>
+                        <h4 data-lang-en="Starting Kendo can be both exciting and challenging. By learning the basics of equipment, techniques, etiquette, and dojo culture, beginners can build a strong foundation for future growth. Remember, Kendo is a lifelong journey—progress comes through consistent practice, respect for others, and dedication to self-improvement." data-lang-ja="剣道を始めることは、わくわくすると同時に困難も伴います。防具、技術、礼法、道場文化の基本を学ぶことで、初心者は将来の成長のための強固な基盤を築くことができます。剣道は一生の旅です。上達は、継続的な稽古、他者への敬意、そして自己鍛錬への献身によってもたらされることを忘れないでください" data-lang-ko="검도를 시작하는 것은 흥미롭고 도전적일 수 있습니다. 장비, 기술, 예절 및 도장 문화의 기본을 배움으로써 초보자는 미래 성장을 위한 튼튼한 기초를 쌓을 수 있습니다. 기억하세요, 검도는 일생의 여정입니다. 진보는 꾸준한 수련, 타인에 대한 존중, 그리고 자기 수양에 대한 헌신을 통해 이루어집니다." data-lang-zh-cn="开始剑道修行既令人兴奋又充满挑战。通过学习装备、技术、礼仪和道场文化的基础知识，初学者可以为未来的成长奠定坚实的基础。请记住，剑道是一生的旅程——进步来自于持续的练习、对他人的尊重以及对自我完善的执着追求。" data-lang-zh-tw="開始劍道修行既令人興奮又充滿挑戰。通過學習裝備、技術、禮儀和道場文化的基礎知識，初學者可以為未來的成長奠定堅實的基礎。請記住，劍道是一生的旅程——進步來自於持續的練習、對他人的尊重以及對自我完善的執著追求。" data-lang-es="Comenzar en el Kendo puede ser emocionante y desafiante. Al aprender los fundamentos del equipo, las técnicas, la etiqueta y la cultura del dojo, los principiantes pueden construir una base sólida para el crecimiento futuro. Recuerda, el Kendo es un viaje de por vida; el progreso llega mediante la práctica constante, el respeto por los demás y la dedicación a la superación personal."></h4>
+                    </div>
+                </article>
+            </div>
+
+            <aside class="sidebar">
+                <div class="sidebar-section social-links">
+                    <h3 data-lang-en="Follow Us" data-lang-ja="フォローしてください" data-lang-ko="팔로우하세요" data-lang-zh-cn="关注我们" data-lang-zh-tw="關注我們" data-lang-es=" Síganos"></h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/share/1GirNsNWvw/" target="_blank" aria-label="Facebook" class="social-icon facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/kendocrafts?igsh=bTBldzg0eWZsbTMw" target="_blank" aria-label="Instagram" class="social-icon instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/+8615953599429" target="_blank" aria-label="WhatsApp" class="social-icon whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p data-lang-en="© 2025 KendoCrafts. All rights reserved." data-lang-ja="© 2025 剣道クラフト。全著作権所有。" data-lang-ko="© 2025 겐도크래프트。저작권 소유。" data-lang-zh-cn="© 2025 KendoCrafts。保留所有权利。" data-lang-zh-tw="© 2025 KendoCrafts。保留所有權利。" data-lang-es="© 2025 KendoCrafts。Todos los derechos reservados."></p>
+        </div>
+    </footer>
+
+<script>
+    // 修复语言选择器事件绑定
+    const langSelect = document.getElementById('lang-select');
+    const sidebarLangSelect = document.getElementById('sidebar-lang-select');
+
+    // 同步两个选择器
+    function syncLanguageSelectors(value) {
+        langSelect.value = value;
+        sidebarLangSelect.value = value;
+        applyTranslations(value);
+    }
+
+    // 应用翻译
+    function applyTranslations(lang) {
+        // 处理所有带有data-lang属性的元素
+        document.querySelectorAll('[data-lang-' + lang + ']').forEach(element => {
+            // 处理不同类型的元素
+            if (element.tagName === 'INPUT' && element.getAttribute('placeholder')) {
+                element.placeholder = element.getAttribute('data-lang-' + lang);
+            } else if (element.tagName === 'IMG' && element.getAttribute('alt')) {
+                element.alt = element.getAttribute('data-lang-' + lang);
+            } else {
+                element.textContent = element.getAttribute('data-lang-' + lang);
+            }
+        });
+        
+        document.documentElement.lang = lang;
+    }
+
+    langSelect.addEventListener('change', function() {
+        syncLanguageSelectors(this.value);
+    });
+
+    sidebarLangSelect.addEventListener('change', function() {
+        syncLanguageSelectors(this.value);
+    });
+
+    // 移动端菜单功能
+    const mobileMenuBtn = document.querySelector('.menu-toggle');
+    const mainNav = document.querySelector('.sidebar-nav');
+    const mobileMenuOverlay = document.querySelector('.overlay');
+    
+    mobileMenuBtn.addEventListener('click', function() {
+        mainNav.classList.toggle('active');
+        mobileMenuOverlay.classList.toggle('active');
+        document.body.classList.toggle('overflow-hidden');
+    });
+
+    mobileMenuOverlay.addEventListener('click', function() {
+        mainNav.classList.remove('active');
+        this.classList.remove('active');
+        document.body.classList.remove('overflow-hidden');
+    });
+
+    // 初始化时应用默认语言
+    applyTranslations('en');
+</script>
+</body>
+</html>

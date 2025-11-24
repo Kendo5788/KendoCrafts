@@ -1,0 +1,321 @@
+/* Guides页面专用样式（仅控制主体内容，导航栏样式由主页scripts.css控制） */
+
+.guides-container {
+    max-width: 1200px;
+    margin: 120px auto 50px; /* 顶部留出导航栏高度+40px间距（与主页一致） */
+    padding: 0 20px;
+}
+
+/* 页面标题区 */
+.guides-header {
+    text-align: center;
+    margin-bottom: 50px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #eee;
+}
+
+.guides-header h1 {
+    color: #1f2d3d;
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.guides-header p {
+    color: #666;
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* 指南分类导航 */
+.guides-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.guides-nav a {
+    color: #5a3d9e;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 0.95em;
+}
+
+.guides-nav a:hover {
+    background: #f0edf5;
+}
+
+.guides-nav a.active {
+    background: #5a3d9e;
+    color: white;
+}
+
+/* 内容区布局 */
+.guides-content {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 40px;
+}
+
+/* 主内容区 */
+.main-content {
+    padding: 10px 0;
+}
+
+/* 指南卡片 */
+.guide-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 35px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.guide-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.guide-image {
+    flex: 0 0 280px;
+}
+
+.guide-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.guide-info {
+    flex: 1 1 500px;
+    padding: 30px;
+}
+
+.guide-card h2 {
+    color: #1f2d3d;
+    margin-bottom: 15px;
+    font-size: 1.6em;
+    line-height: 1.3;
+}
+
+.guide-meta {
+    color: #888;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.guide-meta span:nth-child(2) {
+    color: #ccc;
+}
+
+.guide-card p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.guide-steps {
+    margin: 0 0 25px 20px;
+    color: #555;
+    line-height: 1.8;
+    list-style-type: disc;
+}
+
+.guide-steps li {
+    margin-bottom: 10px;
+    padding-left: 5px;
+}
+
+.read-more {
+    display: inline-block;
+    color: #5a3d9e;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 5px;
+    transition: all 0.3s ease;
+}
+
+.read-more:hover {
+    color: #472c7a;
+    padding-left: 5px;
+}
+
+/* 侧边栏 */
+.sidebar {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    align-self: start;
+}
+
+.sidebar-section {
+    margin-bottom: 35px;
+}
+
+/* 社媒链接样式 */
+.social-links h3 {
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.social-icon.facebook {
+    background-color: #1877f2;
+}
+
+.social-icon.instagram {
+    background-color: #e4405f;
+}
+
+.social-icon.whatsapp {
+    background-color: #25d366;
+}
+
+/* 侧边栏标题 */
+.sidebar h3 {
+    color: #1f2d3d;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #f0edf5;
+    font-size: 1.2em;
+}
+
+/* 侧边栏列表 */
+.popular-guides li {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.popular-guides li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.popular-guides a {
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar-guide-title {
+    display: block;
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.sidebar-guide-category {
+    display: block;
+    color: #888;
+    font-size: 0.85em;
+}
+
+.popular-guides a:hover .sidebar-guide-title {
+    color: #5a3d9e;
+}
+
+.guide-categories li {
+    margin-bottom: 12px;
+}
+
+.guide-categories a {
+    color: #555;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+}
+
+.guide-categories a:hover {
+    color: #5a3d9e;
+    padding-left: 5px;
+}
+
+.guide-categories span {
+    color: #aaa;
+    font-weight: normal;
+}
+
+/* 响应式适配（与主页一致） */
+@media (max-width: 992px) {
+    .guide-image {
+        flex: 0 0 100%;
+    }
+    
+    .guide-image img {
+        height: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    .guides-content {
+        grid-template-columns: 1fr;
+    }
+
+    .guides-header h1 {
+        font-size: 2em;
+    }
+
+    .sidebar {
+        margin-top: 20px;
+    }
+
+    .guide-info {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .guides-header {
+        margin-bottom: 30px;
+    }
+    
+    .guides-nav a {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+    
+    .guide-card h2 {
+        font-size: 1.4em;
+    }
+    
+    .guide-info {
+        padding: 20px;
+    }
+}

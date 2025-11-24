@@ -12,12 +12,9 @@
 <meta property="og:site_name" content="KendoCrafts">
 <meta name="robots" content="index, follow">
 <title>KendoCrafts | Crafting the Spirit of Kendo</title>
-<!-- 预加载关键CSS，提升渲染速度 -->
 <link rel="stylesheet" href="css/style.css">
-<!-- 预连接统计工具域名，减少连接延迟 -->
 <link rel="preconnect" href="https://www.statecounter.com">
 <style>
-  /* 16:9比例Banner响应式样式 */
   .banner {
     margin-top: 80px !important;
     width: 100% !important;
@@ -27,7 +24,7 @@
   
   .banner-container {
     width: 100% !important;
-    padding-top: 56.25%; /* 16:9比例 (9/16 = 0.5625) */
+    padding-top: 56.25%; /* 16:9比例 */
     position: relative !important;
     margin: 0 !important;
     padding-left: 0 !important;
@@ -41,7 +38,7 @@
     width: 100% !important;
     height: 100% !important;
     z-index: 1 !important;
-    object-fit: contain !important; /* 保持比例并覆盖容器 */
+    object-fit: contain !important;
     display: block !important;
     margin: 0 !important;
   }
@@ -61,7 +58,7 @@
            data-lang-es="Logotipo de KendoCrafts" loading="eager">
     </div>
     
-    <nav>
+    <nav class="desktop-nav">
       <a href="#home" data-lang-en="Home" data-lang-ja="ホーム" data-lang-ko="홈" data-lang-zh-cn="首页" data-lang-zh-tw="首頁" data-lang-es="Inicio"></a>
       <a href="#kote" data-lang-en="Kote Repair" data-lang-ja="小手修理" data-lang-ko="코테 수리" data-lang-zh-cn="手套修复" data-lang-zh-tw="手套修復" data-lang-es="Reparación de Kote"></a>
       <a href="#men" data-lang-en="Men Refinishing" data-lang-ja="面塗装" data-lang-ko="먼 재도색" data-lang-zh-cn="面护具翻新" data-lang-zh-tw="面護具翻新" data-lang-es="Refinamiento de Men"></a>
@@ -69,9 +66,10 @@
       <a href="#engraving" data-lang-en="Shinai Engraving" data-lang-ja="竹刀彫刻" data-lang-ko="신나이 새김" data-lang-zh-cn="竹剑雕刻" data-lang-zh-tw="竹劍雕刻" data-lang-es="Grabado en Shinai"></a>
       <a href="#about" data-lang-en="About Us" data-lang-ja="会社概要" data-lang-ko="회사 소개" data-lang-zh-cn="关于我们" data-lang-zh-tw="關於我們" data-lang-es="Sobre Nosotros"></a>
       <a href="#faq" data-lang-en="FAQ" data-lang-ja="よくある質問" data-lang-ko="자주 묻는 질문" data-lang-zh-cn="常见问题" data-lang-zh-tw="常見問題" data-lang-es="Preguntas Frecuentes"></a>
+      <a href="guides.html" data-lang-en="Guides" data-lang-ja="ガイド" data-lang-ko="가이드" data-lang-zh-cn="指南" data-lang-zh-tw="指南" data-lang-es="Guías"></a>
       <a href="#contact" data-lang-en="Contact" data-lang-ja="お問い合わせ" data-lang-ko="연락처" data-lang-zh-cn="联系我们" data-lang-zh-tw="聯繫我們" data-lang-es="Contacto"></a>
     </nav>
-        
+    
     <!-- 语言下拉菜单 -->
     <div class="language-selector">
       <select id="lang-select">
@@ -83,20 +81,54 @@
         <option value="es">Español</option>
       </select>
     </div>
+    
+    <!-- 移动端菜单按钮 -->
+    <button class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </div>
+  
+  <!-- 侧边栏导航 -->
+  <nav class="sidebar-nav">
+    <a href="#home" data-lang-en="Home" data-lang-ja="ホーム" data-lang-ko="홈" data-lang-zh-cn="首页" data-lang-zh-tw="首頁" data-lang-es="Inicio"></a>
+    <a href="#kote" data-lang-en="Kote Repair" data-lang-ja="小手修理" data-lang-ko="코테 수리" data-lang-zh-cn="手套修复" data-lang-zh-tw="手套修復" data-lang-es="Reparación de Kote"></a>
+    <a href="#men" data-lang-en="Men Refinishing" data-lang-ja="面塗装" data-lang-ko="먼 재도색" data-lang-zh-cn="面护具翻新" data-lang-zh-tw="面護具翻新" data-lang-es="Refinamiento de Men"></a>
+    <a href="#embroidery" data-lang-en="Embroidery" data-lang-ja="刺繡" data-lang-ko="자수" data-lang-zh-cn="刺绣" data-lang-zh-tw="刺繡" data-lang-es="Bordado"></a>
+    <a href="#engraving" data-lang-en="Shinai Engraving" data-lang-ja="竹刀彫刻" data-lang-ko="신나이 새김" data-lang-zh-cn="竹剑雕刻" data-lang-zh-tw="竹劍雕刻" data-lang-es="Grabado en Shinai"></a>
+    <a href="#about" data-lang-en="About Us" data-lang-ja="会社概要" data-lang-ko="회사 소개" data-lang-zh-cn="关于我们" data-lang-zh-tw="關於我們" data-lang-es="Sobre Nosotros"></a>
+    <a href="#faq" data-lang-en="FAQ" data-lang-ja="よくある質問" data-lang-ko="자주 묻는 질문" data-lang-zh-cn="常见问题" data-lang-zh-tw="常見問題" data-lang-es="Preguntas Frecuentes"></a>
+    <a href="guides.html" data-lang-en="Guides" data-lang-ja="ガイド" data-lang-ko="가이드" data-lang-zh-cn="指南" data-lang-zh-tw="指南" data-lang-es="Guías"></a>
+    <a href="#contact" data-lang-en="Contact" data-lang-ja="お問い合わせ" data-lang-ko="연락처" data-lang-zh-cn="联系我们" data-lang-zh-tw="聯繫我們" data-lang-es="Contacto"></a>
+    
+    <!-- 侧边栏中的语言选择器 -->
+    <div style="padding: 15px 25px; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 10px;">
+      <select id="sidebar-lang-select" style="width: 100%;">
+        <option value="en">English</option>
+        <option value="ja">日本語</option>
+        <option value="ko">한국어</option>
+        <option value="zh-cn">简体中文</option>
+        <option value="zh-tw">繁體中文</option>
+        <option value="es">Español</option>
+      </select>
+    </div>
+  </nav>
+  
+  <!-- 遮罩层 -->
+  <div class="overlay"></div>
 </header>
 
 <!-- Banner / Home Section -->
 <section id="home" class="banner">
-  <!-- LCP核心图片：优先加载，不延迟 -->
-    <img src="images/kendo-banner-main.webp" alt="Kendo Equipment Banner" 
-         data-lang-en="Kendo Equipment Banner" 
-         data-lang-ja="剣道用品のバナー" 
-         data-lang-ko="겐도 장비 배너" 
-         data-lang-zh-cn="剑道装备横幅" 
-         data-lang-zh-tw="劍道裝備橫幅" 
-         data-lang-es="Banner de equipo de Kendo" loading="eager"
-         fetchpriority="high">
+  <img src="images/kendo-banner-main.webp" alt="Kendo Equipment Banner" 
+       data-lang-en="Kendo Equipment Banner" 
+       data-lang-ja="剣道用品のバナー" 
+       data-lang-ko="겐도 장비 배너" 
+       data-lang-zh-cn="剑道装备横幅" 
+       data-lang-zh-tw="劍道裝備橫幅" 
+       data-lang-es="Banner de equipo de Kendo" loading="eager"
+       fetchpriority="high">
 </section>
 
 <!-- 业务介绍区域 -->
@@ -116,7 +148,6 @@
 </section>
 
 <div class="container">
-
   <!-- Kote Repair -->
   <section id="kote" class="service-section row-layout">
     <div class="carousel" data-carousel="kote">
@@ -128,7 +159,7 @@
            data-lang-ko="겐도 코테 수리 예시 1" 
            data-lang-zh-cn="剑道手套修复示例1" 
            data-lang-zh-tw="劍道手套修復示例1" 
-           data-lang-es="Ejemplo de reparación de Kote de kendo 1" loading="lazy">
+           data-lang-es="Ejemplo de reparación de Kote de kendo 1" loading="lazy" class="active">
       <img src="images/kendo-kote-repair-02.webp" alt="Kote Repair Example 2" 
            data-lang-en="Kendo Kote Repair Example 2" 
            data-lang-ja="剣道小手修理例2" 
@@ -159,9 +190,9 @@
            data-lang-es="Ejemplo de reparación de Kote de kendo 5" loading="lazy">
     </div>
     <div class="service-text">
-      <h2 data-lang-en="Kote Repair & Palm Replacement" data-lang-ja="小手の修理と掌の交換" data-lang-ko="코테 수리 및 손바닥 교체" data-lang-zh-cn="手套修复与掌心更换" data-lang-zh-tw="手套修復與掌心更換" data-lang-es="Reparación de Kote y reemplazo de palma"></h2>
-      <p data-lang-en="Restore your Kote to its best condition with our professional palm replacement and repair service. We use high-quality materials including breathable fabric and authentic Japanese deer leather, available in multiple color options including traditional brown and classic white." 
-         data-lang-ja="プロの掌交換と修理サービスで、あなたの小手を最高の状態に復元します。通気性のある生地と本物の日本の鹿革を使用し、伝統的な茶色やクラシックな白など複数の色から選択できます。" 
+      <h2 data-lang-en="Kote Repair & Restoration" data-lang-ja="小手の修理と復元" data-lang-ko="코테 수리 및 복원" data-lang-zh-cn="手套修复与还原" data-lang-zh-tw="手套修復與還原" data-lang-es="Reparación y restauración de Kote"></h2>
+      <p data-lang-en="Restore your kote to its best condition with our professional palm replacement and repair service. We use high-quality materials including breathable fabrics and authentic Japanese deer leather, available in multiple color options including traditional brown and classic white." 
+         data-lang-ja="プロの掌替えと修理サービスで、あなたの小手を最高の状態に復元します。通気性のある生地と本物の日本の鹿革を使用し、伝統的な茶色やクラシックな白など複数の色オプションをご用意しています。" 
          data-lang-ko="전문적인 손바닥 교체 및 수리 서비스로 코테를 최상의 상태로 복원하세요. 통기성 있는 원단과 진정한 일본 사슴 가죽을 사용하며, 전통적인 갈색과 클래식한 흰색을 포함한 다양한 색상 옵션을 제공합니다." 
          data-lang-zh-cn="通过我们的专业掌心更换和修复服务，将您的手套恢复到最佳状态。我们使用高质量材料，包括透气面料和正宗日本鹿皮，有多种颜色选择，包括传统棕色和经典白色。" 
          data-lang-zh-tw="透過我們的專業掌心更換和修復服務，將您的手套恢復到最佳狀態。我們使用高品質材料，包括透氣面料和正宗日本鹿皮，有多種顏色選擇，包括傳統棕色和經典白色。" 
@@ -185,9 +216,9 @@
       <p data-lang-en="Bring new life to your equipment with our professional Kendo gear restoration service. We offer surface refinishing for men and throat areas (with optional fully black finish), color renewal for men, dō, kote and tare, and professional deep cleaning." 
          data-lang-ja="プロの剣道用品復元サービスで、あなたの装備に新しい生命を吹き込みましょう。面と喉の部分の表面塗装（オプションで全黒仕上げ）、面、胴、小手、垂れの色の復元、そして専門的な徹底クリーニングを提供しています。" 
          data-lang-ko="전문적인 겐도 장비 복원 서비스로 장비에 새로운 생명을 불어넣어보세요. 먼과 목 부분의 표면 재도색(선택적으로 완전 검은색 마감), 먼, 동, 코테, 타레의 색상 갱신, 그리고 전문적인 깊은 청소 서비스를 제공합니다." 
-         data-lang-zh-cn="通过我们的专业剑道装备修复服务，为您的装备注入新的活力。我们提供面护具和喉部区域的表面翻新（可选全黑处理）、面护具、护胸、手套和护腰的颜色更新，以及专业深度清洁。" 
-         data-lang-zh-tw="透過我們的專業劍道裝備修復服務，為您的裝備注入新的活力。我們提供面護具和喉部區域的表面翻新（可選全黑處理）、面護具、護胸、手套和護腰的顏色更新，以及專業深度清潔。" 
-         data-lang-es="Darle nueva vida a su equipo con nuestro servicio profesional de restauración de equipos de kendo. Ofrecemos refinamiento de superficie para áreas de men y garganta (con acabado totalmente negro opcional), renovación de color para men, dō, kote y tare, y limpieza profunda profesional."></p>
+         data-lang-zh-cn="通过我们的专业剑道装备修复服务，为您的装备注入新的活力。我们提供面护具和喉部区域的表面翻新（可选全黑处理）、面护具、护胸、手套和垂布的颜色更新，以及专业深度清洁服务。" 
+         data-lang-zh-tw="透過我們的專業劍道裝備修復服務，為您的裝備注入新的活力。我們提供面護具和喉部區域的表面翻新（可選全黑處理）、面護具、護胸、手套和垂布的顏色更新，以及專業深度清潔服務。" 
+         data-lang-es="Darle nueva vida a su equipo con nuestro servicio profesional de restauración de equipo de kendo. Ofrecemos refinamiento de superficie para áreas de men y garganta (con acabado totalmente negro opcional), renovación de color para men, dō, kote y tare, y limpieza profunda profesional."></p>
       <div class="service-button">
         <a href="#contact" class="quote-btn" 
            data-lang-en="Request a Quote" 
@@ -207,7 +238,7 @@
            data-lang-ko="겐도 먼 재도색 예시 1" 
            data-lang-zh-cn="剑道面护具翻新示例1" 
            data-lang-zh-tw="劍道面護具翻新示例1" 
-           data-lang-es="Ejemplo de refinamiento de Men de kendo 1" loading="lazy">
+           data-lang-es="Ejemplo de refinamiento de Men de kendo 1" loading="lazy" class="active">
       <img src="images/kendo-men-refinishing-02.webp" alt="Men Refinishing Example 2" 
            data-lang-en="Kendo Men Refinishing Example 2" 
            data-lang-ja="剣道面塗装例2" 
@@ -243,7 +274,7 @@
            data-lang-ko="겐도 자수 예시 1" 
            data-lang-zh-cn="剑道刺绣示例1" 
            data-lang-zh-tw="劍道刺繡示例1" 
-           data-lang-es="Ejemplo de bordado de kendo 1" loading="lazy">
+           data-lang-es="Ejemplo de bordado de kendo 1" loading="lazy" class="active">
       <img src="images/kendo-embroidery-02.webp" alt="Embroidery Example 2" 
            data-lang-en="Kendo Embroidery Example 2" 
            data-lang-ja="剣道刺繡例2" 
@@ -297,12 +328,12 @@
   <section id="engraving" class="service-section row-layout row-reverse">
     <div class="service-text">
       <h2 data-lang-en="Shinai Engraving" data-lang-ja="竹刀彫刻" data-lang-ko="신나이 새김" data-lang-zh-cn="竹剑雕刻" data-lang-zh-tw="竹劍雕刻" data-lang-es="Grabado en Shinai"></h2>
-      <p data-lang-en="Personalize your shinai with our precision engraving service. We offer custom name engraving, dojo symbols, and traditional motifs to make your bamboo sword truly unique. Our laser engraving technique ensures sharp, long-lasting designs that won't fade with use or time." 
-         data-lang-ja="精密な彫刻サービスで、あなたの竹刀を個性化しましょう。オーダーメイドの名前彫刻、道場のシンボル、伝統的なモチーフを提供し、あなたの竹刀を真にユニークなものにします。レーザー彫刻技術を使用することで、使用や時間の経過によって褪せることのない鮮明で耐久性のあるデザインを保証します。" 
-         data-lang-ko="정밀한 새김 서비스로 신나이를 개인화하세요. 맞춤 이름 새김, 도장 상징 및 전통적인 무늬를 제공하여 대나무 칼을 정말로 독특하게 만듭니다. 레이저 새김 기술은 사용이나 시간이 지나도 희미해지지 않는 선명하고 오래가는 디자인을 보장합니다." 
-         data-lang-zh-cn="通过我们的精密雕刻服务，为您的竹剑增添个性。我们提供定制姓名雕刻、道场标志和传统图案，让您的竹剑真正独一无二。我们的激光雕刻技术确保图案清晰、持久，不会因使用或时间而褪色。" 
-         data-lang-zh-tw="透過我們的精密雕刻服務，為您的竹劍增添個性。我們提供定制姓名雕刻、道場標誌和傳統圖案，讓您的竹劍真正獨一無二。我們的激光雕刻技術確保圖案清晰、持久，不會因使用或時間而褪色。" 
-         data-lang-es="Personalice su shinai con nuestro servicio de grabado de precisión. Ofrecemos grabado de nombres personalizados, símbolos de dojo y motivos tradicionales para hacer que su espada de bambú sea realmente única. Nuestra técnica de grabado láser garantiza diseños nítidos y duraderos que no se desvanecerán con el uso o el tiempo."></p>
+      <p data-lang-en="Personalize your shinai with our precision engraving service. Add your name, rank, dojo affiliation, or meaningful symbols to create a truly unique practice weapon. Our skilled craftsmen use traditional techniques combined with modern tools to ensure clean, precise engravings that enhance your shinai without compromising its integrity." 
+         data-lang-ja="精密な彫刻サービスであなたの竹刀を個性化しましょう。名前、段位、所属道場、または意義のあるシンボルを追加して、真に独特の稽古用武器を作り上げます。熟練した職人が伝統的な技術と現代的な道具を組み合わせて、竹刀の強度を損なうことなく、きれいで精密な彫刻を施します。" 
+         data-lang-ko="정밀한 새김 서비스로 신나이에 개인적인 느낌을 더하세요. 이름, 단위, 소속 도장 또는 의미 있는 상징을 추가하여 정말 독특한 연습 무기를 만드세요. 우리의 숙련된 장인들은 전통 기술과 현대 도구를 결합하여 신나이의 견고함을 해치지 않으면서 깨끗하고 정밀한 새김을 보장합니다." 
+         data-lang-zh-cn="通过我们的精密雕刻服务，为您的竹剑增添个性化元素。添加您的姓名、段位、所属道场或有意义的符号，打造真正独特的练习武器。我们的熟练工匠将传统技术与现代工具相结合，确保雕刻清晰精确，既美化竹剑又不影响其结构完整性。" 
+         data-lang-zh-tw="透過我們的精密雕刻服務，為您的竹劍增添個性化元素。添加您的姓名、段位、所屬道場或有意義的符號，打造真正獨特的練習武器。我們的熟練工匠將傳統技術與現代工具相結合，確保雕刻清晰精確，既美化竹劍又不影響其結構完整性。" 
+         data-lang-es="Personalice su shinai con nuestro servicio de grabado de precisión. Agregue su nombre, rango, afiliación a dojo o símbolos significativos para crear un arma de práctica verdaderamente único. Nuestros hábiles artesanos combinan técnicas tradicionales con herramientas modernas para garantizar grabados limpios y precisos que realcen su shinai sin comprometer su integridad."></p>
       <div class="service-button">
         <a href="#contact" class="quote-btn" 
            data-lang-en="Request a Quote" 
@@ -322,7 +353,7 @@
            data-lang-ko="신나이 새김 예시 1" 
            data-lang-zh-cn="竹剑雕刻示例1" 
            data-lang-zh-tw="竹劍雕刻示例1" 
-           data-lang-es="Ejemplo de grabado en Shinai 1" loading="lazy">
+           data-lang-es="Ejemplo de grabado en Shinai 1" loading="lazy" class="active">
       <img src="images/shinai-engraving-02.webp" alt="Shinai Engraving Example 2" 
            data-lang-en="Shinai Engraving Example 2" 
            data-lang-ja="竹刀彫刻例2" 
@@ -377,11 +408,11 @@
     <div class="about-text-expanded">
       <h2 data-lang-en="About Us" data-lang-ja="会社概要" data-lang-ko="회사 소개" data-lang-zh-cn="关于我们" data-lang-zh-tw="關於我們" data-lang-es="Sobre Nosotros"></h2>
       <p data-lang-en="Welcome to KendoCrafts, your trusted partner in the world of kendo equipment repairs. We specialize in providing professional repair and maintenance services for all your kendo gear, from Kote to Bogu. With years of experience in the kendo community, we understand the importance of preserving the integrity and functionality of your equipment. Whether you're an experienced practitioner or a beginner, we ensure your gear is restored to its best condition, allowing you to focus on your training without worries. Our team of experts uses high-quality materials and traditional techniques to repair and maintain your kendo equipment, ensuring it lasts longer and performs better. We're passionate about keeping the heritage of kendo alive and supporting athletes in their pursuit of excellence." 
-         data-lang-ja="剣道クラフトへようこそ。剣道用品の修理における信頼できるパートナーです。小手から防具まで、すべての剣道用品の専門的な修理とメンテナンスサービスを提供しています。剣道コミュニティでの長年の経験を持ち、装備の健全性と機能を維持する重要性を理解しています。経験豊富な練習者であれ、初心者であれ、装備を最高の状態に復元し、心配せずにトレーニングに集中できるようにします。専門家のチームが高品質の素材と伝統的な技術を使用して剣道用品を修理・メンテナンスし、長持ちさせ、性能を向上させます。剣道の伝統を守り、優れた技術を追求するアスリートを支援することに情熱を持って取り組んでいます。" 
-         data-lang-ko="겐도 장비 수리 분야의 신뢰할 수 있는 파트너인 겐도크래프트에 오신 것을 환영합니다. 우리는 코테부터 보구까지 모든 겐도 장비에 대한 전문적인 수리 및 유지 관리 서비스를 제공하는 데 특화되어 있습니다. 겐도 커뮤니티에서 오랜 경험을 쌓아온 우리는 장비의 무결성과 기능 유지를 중요하게 생각합니다. 경험 많은 연습자이든 초보자이든, 장비를 최상의 상태로 복원하여 걱정 없이 훈련에 집중할 수 있도록 지원합니다. 우리의 전문가 팀은 고품질 소재와 전통적인 기술을 사용하여 겐도 장비를 수리하고 유지 관리하여 수명을 연장하고 성능을 향상시킵니다. 우리는 겐도의 유산을 살리고 우수함을 추구하는 운동선수들을 지원하는 데 열정을 가지고 있습니다." 
-         data-lang-zh-cn="欢迎来到KendoCrafts，您在剑道装备维修领域值得信赖的合作伙伴。我们专门为您的所有剑道装备提供专业的维修和保养服务，从小手到全套护具。凭借在剑道社区多年的经验，我们深知维护装备完整性和功能性的重要性。无论您是经验丰富的练习者还是初学者，我们都能确保您的装备恢复到最佳状态，让您可以毫无顾虑地专注于训练。我们的专家团队使用高质量材料和传统技术来维修和保养您的剑道装备，确保其更耐用、性能更好。我们热衷于传承剑道的传统，并支持运动员追求卓越。" 
-         data-lang-zh-tw="歡迎來到KendoCrafts，您在劍道裝備維修領域值得信賴的合作夥伴。我們專門為您的所有劍道裝備提供專業的維修和保養服務，從小手到全套護具。憑藉在劍道社區多年的經驗，我們深知維護裝備完整性和功能性的重要性。無論您是經驗豐富的練習者還是初學者，我們都能確保您的裝備恢復到最佳狀態，讓您可以毫無顧慮地專注於訓練。我們的專家團隊使用高品質材料和傳統技術來維修和保養您的劍道裝備，確保其更耐用、性能更好。我們熱衷於傳承劍道的傳統，並支持運動員追求卓越。" 
-         data-lang-es="Bienvenido a KendoCrafts, tu socio de confianza en el mundo de las reparaciones de equipos de kendo. Nos especializamos en ofrecer servicios profesionales de reparación y mantenimiento para todos tus equipos de kendo, desde Kote hasta Bogu. Con años de experiencia en la comunidad del kendo, comprendemos la importancia de preservar la integridad y funcionalidad de tu equipo. Ya seas un practicante experimentado o un principiante, nos aseguramos de que tu equipo se restablezca a su mejor condición, permitiéndote centrarte en tu entrenamiento sin preocupaciones. Nuestro equipo de expertos utiliza materiales de alta calidad y técnicas tradicionales para reparar y mantener tu equipo de kendo, asegurando que dure más y funcione mejor. Estamos apasionados por mantener viva la herencia del kendo y apoyar a los atletas en su búsqueda de la excelencia."></p>
+         data-lang-ja="KendoCraftsへようこそ。剣道用品の修理における信頼できるパートナーです。小手から防具まで、すべての剣道用品の専門的な修理とメンテナンスサービスを提供しています。剣道界での長年の経験を持つ私たちは、装備の完全性と機能性を維持する重要性を理解しています。経験豊富な練習者であれ、初心者であれ、装備を最高の状態に復元し、不安を抱かずに稽古に集中できるようにします。専門チームは高品質の素材と伝統的な技術を使用して剣道用品を修理・メンテナンスし、長持ちさせ、性能を向上させます。私たちは剣道の伝統を守り、選手たちの優れた技術の追求を支援することに情熱を持っています。" 
+         data-lang-ko="KendoCrafts에 오신 것을 환영합니다. 겐도 장비 수리 분야에서 신뢰할 수 있는 파트너입니다. 우리는 코테부터 보구까지 모든 겐도 장비에 대한 전문적인 수리 및 유지 보수 서비스를 제공합니다. 겐도 커뮤니티에서의多年의 경험을 통해 장비의 완전성과 기능성을 유지하는 중요성을 이해하고 있습니다. 경험 많은 연습자이든 초보자이든, 당신의 장비를 최상의 상태로 복원하여 걱정 없이 훈련에 집중할 수 있도록保障합니다. 우리의 전문 팀은 고품질 소재와 전통적인 기술을 사용하여 겐도 장비를 수리하고 유지 관리하여 수명을 연장하고 성능을 향상시킵니다. 우리는 겐도의 유산을 살리고 선수들이 우수함을 추구하는 것을 지원하는 데 열정을 가지고 있습니다." 
+         data-lang-zh-cn="欢迎来到KendoCrafts，您在剑道装备维修领域值得信赖的合作伙伴。我们专业提供各类剑道装备的维修和保养服务，从手套到护具应有尽有。凭借在剑道界多年的经验，我们深知保持装备完整性和功能性的重要性。无论您是经验丰富的练习者还是初学者，我们都能确保您的装备恢复到最佳状态，让您可以毫无顾虑地专注于训练。我们的专业团队使用高质量材料和传统技术来维修和保养您的剑道装备，确保其更耐用、性能更佳。我们热衷于传承剑道文化遗产，并支持运动员追求卓越。" 
+         data-lang-zh-tw="歡迎來到KendoCrafts，您在劍道裝備維修領域值得信賴的合作夥伴。我們專業提供各類劍道裝備的維修和保養服務，從手套到護具應有盡有。憑藉在劍道界多年的經驗，我們深知保持裝備完整性和功能性的重要性。無論您是經驗豐富的練習者還是初學者，我們都能確保您的裝備恢復到最佳狀態，讓您可以毫無顧慮地專注於訓練。我們的專業團隊使用高品質材料和傳統技術來維修和保養您的劍道裝備，確保其更耐用、性能更佳。我們熱衷於傳承劍道文化遺產，並支持運動員追求卓越。" 
+         data-lang-es="Bienvenido a KendoCrafts, su socio de confianza en el mundo de las reparaciones de equipo de kendo. Nos especializamos en proporcionar servicios profesionales de reparación y mantenimiento para todo su equipo de kendo, desde Kote hasta Bogu. Con años de experiencia en la comunidad del kendo, comprendemos la importancia de preservar la integridad y funcionalidad de su equipo. Ya sea que sea un practicante experimentado o un principiante, nos aseguramos de que su equipo se restablezca a su mejor condición, permitiéndole centrarse en su entrenamiento sin preocupaciones. Nuestro equipo de expertos utiliza materiales de alta calidad y técnicas tradicionales para reparar y mantener su equipo de kendo, asegurando que dure más y funcione mejor. Estamos apasionados por mantener viva la herencia del kendo y apoyar a los atletas en su búsqueda de la excelencia."></p>
     </div>
   </section>
 
@@ -466,9 +497,9 @@
     
     <!-- Contact部分 -->
     <div class="column contact-column" id="contact">
-      <h2 data-lang-en="Contact Us" data-lang-ja="お問い合わせ" data-lang-ko="문의하기" data-lang-zh-cn="联系我们" data-lang-zh-tw="聯繫我們" data-lang-es="Contáctenos"></h2>
-      <form class="contact-form">
-        <input type="text" name="name" placeholder="Your Name" data-lang-en="Your Name" data-lang-ja="お名前" data-lang-ko="이름" data-lang-zh-cn="您的姓名" data-lang-zh-tw="您的姓名" data-lang-es="Su nombre" required>
+      <h2 data-lang-en="Contact Us" data-lang-ja="お問い合わせ" data-lang-ko="연락처" data-lang-zh-cn="联系我们" data-lang-zh-tw="聯繫我們" data-lang-es="Contáctenos"></h2>
+      <form class="contact-form" action="https://formspree.io/f/xjkaevro" method="POST">
+        <input type="text" name="name" placeholder="Your Name" data-lang-en="Your Name" data-lang-ja="名前" data-lang-ko="이름" data-lang-zh-cn="您的姓名" data-lang-zh-tw="您的姓名" data-lang-es="Su nombre" required>
         <input type="email" name="email" placeholder="Email Address" data-lang-en="Email Address" data-lang-ja="メールアドレス" data-lang-ko="이메일 주소" data-lang-zh-cn="电子邮箱" data-lang-zh-tw="電子郵箱" data-lang-es="Correo electrónico" required>
         <input type="text" name="subject" placeholder="Subject" data-lang-en="Subject" data-lang-ja="件名" data-lang-ko="주제" data-lang-zh-cn="主题" data-lang-zh-tw="主題" data-lang-es="Asunto" required>
         <textarea rows="5" name="message" placeholder="Your Message" data-lang-en="Your Message" data-lang-ja="メッセージ" data-lang-ko="메시지" data-lang-zh-cn="您的留言" data-lang-zh-tw="您的留言" data-lang-es="Su mensaje" required></textarea>
@@ -487,28 +518,16 @@
      data-lang-es="© 2025 KendoCrafts。Todos los derechos reservados。"></p>
 </footer>
 
-
-<!-- 延迟加载核心脚本，不阻塞首屏 -->
+<!-- 延迟加载核心脚本 -->
 <script defer src="js/script.js"></script>
 
-<!-- StateCounter访客统计（异步加载，不影响速度） -->
-<!-- Default Statcounter code for KendoCrafts
-http://www.kendocrafts.com -->
+<!-- 访客统计代码 -->
 <script type="text/javascript">
   var sc_project=13180214; 
   var sc_invisible=1; 
   var sc_security="a451d760"; 
-  </script>
-  <script type="text/javascript"
-  src="https://www.statcounter.com/counter/counter.js"
-  async></script>
-  <noscript><div class="statcounter"><a title="website
-  statistics" href="https://statcounter.com/"
-  target="_blank"><img class="statcounter"
-  src="https://c.statcounter.com/13180214/0/a451d760/1/"
-  alt="website statistics"
-  referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-  <!-- End of Statcounter Code -->
-<!-- 统计代码结束 -->
+</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript><div class="statcounter"><a title="website statistics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/13180214/0/a451d760/1/" alt="website statistics" referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
 </body>
 </html>
