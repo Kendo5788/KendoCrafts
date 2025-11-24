@@ -157,10 +157,12 @@ document.addEventListener('DOMContentLoaded', function() {
   const contactForm = document.querySelector('.contact-form');
   
   contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // 在实际应用中，这里会有表单提交到服务器的代码
+    //不阻止默认行为
+    //e.preventDefault(); ←删除这行
+
+  // 提交后延迟显示提示
+  setTimeout(() => {
     alert('Thank you for your message! We will get back to you soon.');
-    this.reset();
+  }, 300);
   });
 });
